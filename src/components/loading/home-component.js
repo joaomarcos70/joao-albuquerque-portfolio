@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import "./home-component.scss";
 import IconComponent from "../../shared/icons/iconComponent";
+import LandingPageComponent from "../landing-page/landing-page-component";
 
 const LoadingComponent = () => {
   const [loading, setLoading] = useState(true);
@@ -62,7 +63,6 @@ const LoadingComponent = () => {
   return (
     <Fragment>
       {loading ? (
-        <>
           <div className="loading-wrapper">
             <div ref={loadingReference} className="color">
               <div className="text-icon">
@@ -74,9 +74,10 @@ const LoadingComponent = () => {
               {showText ? <p className="side-text">{currentSideText}</p> : ""}
             </div>
           </div>
-        </>
       ) : (
-        <h1>test</h1>
+        <>
+        <LandingPageComponent />
+        </>
       )}
     </Fragment>
   );
