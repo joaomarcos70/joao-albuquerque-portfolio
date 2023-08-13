@@ -1,0 +1,73 @@
+body{
+    position: absolute;
+    background: rgb(55,62,70);
+    background: linear-gradient(128deg, rgba(55,62,70,1) 15%, rgba(55,62,70,1) 54%, rgba(81,90,101,1) 95%);    
+    }
+
+.loading-wrapper .color{
+    display: flex !important;
+    justify-content: end;
+    position: absolute;
+    background: rgb(255,255,255);
+    background: linear-gradient(128deg, rgba(255,255,255,1) 11%, rgba(197,209,226,1) 64%, rgba(224,233,245,1) 100%);
+    width: 0px;
+    min-height: 100%;
+    animation: progress 4s infinite linear;
+}
+
+@keyframes progress{
+    0%{
+      width: 20%;
+    }
+    25%{
+        width: 50%;
+    }
+    50%{
+        width: 75%;
+    }
+    75%{
+        width: 85%;
+    }
+    100%{
+        width: 100%;
+    }
+};
+
+.text-icon{
+    padding: 10px;
+    animation: pulse 2s infinite linear;
+    .icon{
+        animation: name duration timing-function delay iteration-count direction fill-mode;
+        animation: rotation-icon 1.5s infinite ease;
+        padding: 10px;
+    }
+    @keyframes rotation-icon {
+        from {
+            transform: rotate(-359deg);
+          }
+          to {
+            transform: translateZ(359deg);
+          }
+    }
+
+    @keyframes pulse {
+        0%{
+            opacity: 0.1;
+        }
+        50%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0.1;
+        }
+    }
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #24292e;
+    align-self: center;
+    font-family: 'GoodTime',sans-serif;
+}
+
