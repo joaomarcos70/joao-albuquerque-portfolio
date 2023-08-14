@@ -9,9 +9,10 @@ const LoadingComponent = () => {
   const [percentage, setPercentage] = useState(0);
   const [showText, setShowText] = useState(false);
   const [pause, setPause] = useState(false);
+  const [animateTextOut, setAnimateTextOut] = useState(false);
   const sideTexts = [
     "Meu nome é João Albuquerque",
-    "Sou engenheiro front-end",
+    "Sou desenvolvedor front-end Pl.",
     "Seja bem vindo ao meu portifolio",
   ];
   const [currentSideText, setCurrentSideText] = useState("");
@@ -52,31 +53,37 @@ const LoadingComponent = () => {
       Math.floor(percentage / 30),
       sideTexts.length - 1
     );
-
     setCurrentSideText(sideTexts[positionText]);
-
+    setAnimateTextOut(false)
     setTimeout(() => {
       setPause(false);
+      setAnimateTextOut(true)
     }, 1000);
   }, [pause]);
 
   return (
     <Fragment>
       {loading ? (
-          <div className="loading-wrapper">
-            <div ref={loadingReference} className="color">
-              <div className="text-icon">
-                <span className="icon">
-                  <IconComponent icon="triangle" />
-                </span>
-                <p className="loading-text">CARREGANDO</p>
-              </div>
-              {showText ? <p className="side-text">{currentSideText}</p> : ""}
+        <div className="loading-wrapper">
+          <div ref={loadingReference} className="color">
+            <div className="text-icon">
+              <span className="icon">
+                <IconComponent icon="triangle" />
+              </span>
+              <p className="loading-text">CARREGANDO</p>
             </div>
+            {showText ? (
+              <p className={`side-text ${animateTextOut ? "slide-out" : "slide-in"}`}>
+                {currentSideText}
+              </p>
+            ) : (
+              ""
+            )}
           </div>
+        </div>
       ) : (
         <>
-        <LandingPageComponent />
+          <LandingPageComponent />
         </>
       )}
     </Fragment>

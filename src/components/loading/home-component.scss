@@ -3,6 +3,7 @@ body{
     background: rgb(55,62,70);
     background: linear-gradient(128deg, rgba(55,62,70,1) 15%, rgba(55,62,70,1) 54%, rgba(81,90,101,1) 95%);
     overflow-x: hidden;
+    overflow-y: hidden;
     }
 
 
@@ -16,32 +17,32 @@ body{
         width: 0px;
         min-height: 100%;
         animation: progress 7s linear;
+        box-shadow: 20px 5px 15px 0px rgba(0,0,0,0.2);
     }
+    @keyframes progress{
+        0%{
+          width: 5%;
+        }
+        25%{
+            width: 25%;
+        }
+        50%{
+            width: 50%;
+        }
+         75%{
+            width: 75%;
+        }
+        100%{
+            width: 100%;
+        }
 }
 
-@keyframes progress{
-    0%{
-      width: 5%;
-    }
-    25%{
-        width: 25%;
-    }
-    50%{
-        width: 50%;
-    }
-    75%{
-        width: 75%;
-    }
-    100%{
-        width: 100%;
-    }
 };
 
 .text-icon{
     padding: 10px;
     animation: pulse 2s infinite linear;
     .icon{
-        animation: name duration timing-function delay iteration-count direction fill-mode;
         animation: rotation-icon 1.5s infinite ease;
         padding: 10px;
     }
@@ -86,5 +87,32 @@ body{
     white-space: nowrap;
     transform: translateX(40px);
     font-family: 'GoodTime', sans-serif;
-    letter-spacing: 3px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
+
+.side-text.slide-out {
+    animation: slide-out 0.6s ease-out forwards;
+  }
+  
+  @keyframes slide-out {
+    to {
+        transform: translateY(5%);
+        opacity: 0;
+    }
+  }
+
+.side-text.slide-in {
+    animation: slide-in 0.8s ease-in-out forwards;
+  }
+  
+  @keyframes slide-in {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
