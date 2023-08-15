@@ -23,14 +23,14 @@ const LandingPageComponent = () => {
   };
 
   return (
-    <div className="landing-page">
+    <div className="landing-page noise">
       <Header handleClick={(event) => handleClickBtn(event)} />
       <div className="slogan">
         <h1>João Albuquerque</h1>
         <p>desenvolvedor front-end</p>
       </div>
       {isClickContato ? <div className="contato"><Contact/></div> : ""}
-      {isClickProjetos ? <div className="contato">projetos</div> : ""}
+      {isClickProjetos ? <div className="projeto">projetos</div> : ""}
     </div>
   );
 };

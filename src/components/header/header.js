@@ -11,6 +11,9 @@ const Header = ({ handleClick }) => {
         <li id="contato" onClick={handleClick}>
           Contato
         </li>
+        <li id="sobre" onClick={handleClick}>
+          Sobre
+        </li>
       </ul>
     </nav>
   );
