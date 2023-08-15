@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./landing-page-component.scss";
 import Header from "../header/header";
+import Contact from "../contatos/contact";
 
 const LandingPageComponent = () => {
   const [isClickContato, setClickContato] = useState(false);
@@ -28,7 +29,7 @@ const LandingPageComponent = () => {
         <h1>João Albuquerque</h1>
         <p>desenvolvedor front-end</p>
       </div>
-      {isClickContato ? <div className="contato">contato</div> : ""}
+      {isClickContato ? <div className="contato"><Contact/></div> : ""}
       {isClickProjetos ? <div className="contato">projetos</div> : ""}
     </div>
   );

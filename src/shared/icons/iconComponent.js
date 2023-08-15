@@ -1,10 +1,10 @@
 import React from 'react';
-import * as feather from 'feather-icons'; // Importando todos os ícones Feather Icons
-import './IconComponent.scss'; // Importando um arquivo de estilos para os ícones (opcional)
+import * as feather from 'feather-icons';
+import './IconComponent.scss';
 
 const IconComponent = (props) => {
     
-    const renderedIcon = feather.icons[`${props.icon}`].toSvg(); // Renderizando o ícone
+    const renderedIcon = feather.icons[`${props.icon}`].toSvg();
 
   return (
     <div className="icon-container">

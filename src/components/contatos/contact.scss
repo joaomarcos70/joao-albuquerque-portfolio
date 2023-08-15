@@ -1,0 +1,32 @@
+.contact-area{
+    .email{
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        font-family: 'GoodTime', sans-serif ;
+        padding-bottom: 20px;
+        a{
+            cursor: pointer;
+            margin-right: 10px;
+        }
+    }
+    
+    .social{
+        display: flex;
+    }
+    .social p:nth-child(n){
+        font-size: 14px;
+        margin-right: 20px;
+        font-family: 'GoodTime', sans-serif ;
+    }
+    opacity: 0;
+    animation: fade-in ease-in 1s forwards;
+    transform: translateX(-100%);
+}
+
+@keyframes fade-in {
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
