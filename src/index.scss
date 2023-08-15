@@ -8,6 +8,19 @@
   src: url('../assets/fonts/GOODTIME.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'BloodWaxxRegular';
+  src: url('../assets/fonts/bloodwaxx/Bloodwax-KW8y.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BloodWaxxBold';
+  src: url('../assets/fonts/bloodwaxx/Bloodwaxbold-vgJE.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
 html, body {
   margin: 0;
   padding: 0;
