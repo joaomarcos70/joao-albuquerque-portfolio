@@ -1,7 +1,9 @@
+@import '../../shared/styles/variables.scss';
+
 .header{
     display: flex;
     flex-direction: row;
-    background: linear-gradient(128deg, rgba(55,62,70,1) 15%, rgba(55,62,70,1) 54%, rgba(81,90,101,1) 95%);
+    background: $dark-gradient;
     max-height: 400px;
     position: fixed;
     list-style: none;
@@ -15,7 +17,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(55,62,70,1); 
+        background-color: $main-dark; 
         transform-origin: bottom right;
         transform: skew(-45deg);
         z-index: -1;
@@ -26,8 +28,7 @@
         padding: 30px;
         font-size: 30px;
         background-color: transparent;
-        color: rgb(249, 250, 246);
-        font-family: 'GoodTime', sans-serif;
+        color: $main-white;
         &:hover{
             cursor: pointer;
             animation: hover-text 0.5s ease forwards;
@@ -36,7 +37,7 @@
 
         @keyframes hover-text {
             to{
-                color:  rgb(225, 228, 216) ;
+                color: $secondary-white;
                 scale: 1.1;
                 font-size: 33px;
             }

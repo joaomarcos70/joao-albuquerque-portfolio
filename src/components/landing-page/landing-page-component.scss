@@ -1,13 +1,15 @@
+@import '../../shared/styles/variables.scss';
+
 .landing-page {
     height: 100%;
     width: 100%;
     position: absolute;
-    overflow-x: hidden;
+    overflow: hidden;
     display: flex;
     margin: 0px;
     padding: 0px;
     filter: contrast(42%), brightness(25%);
-    background: linear-gradient(347deg, rgb(251 242 242) 11%, rgb(204 222 249) 64%, rgb(144 168 197) 100%);
+    background: $white-gradient;
     z-index: 1;
 }
 
@@ -28,29 +30,38 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(347deg, rgb(251 242 242) 11%, rgb(204 222 249) 64%, rgb(144 168 197) 100%);
+    background: $white-gradient;
     filter: blur(9px);
     z-index: -2;
+}
+
+.cols1{
+    display: flex;
+    justify-content: center;
+    width: 45%;
+    flex-direction: column;
 }
 
 .slogan {
     display: flex;
     flex-direction: column;
-    padding: 54px;
+    width: 100%;
+    padding: 0px 54px;
     justify-content: center;
 }
+
 h1 {
-  font-size: 46px;
-  font-family: 'GoodTime',sans-serif;
-  letter-spacing: 5px;
-  color: rgba(55,62,70,1);
-  margin: 0px 0px 20px;
+    font-size: 80px;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 4px;
+    color: $main-dark;
+    margin: 0px 0px 10px;
 }
 p {
   font-size: 28px;
-  font-family: 'GoodTime',sans-serif;
+  font-family: 'HelveticaUltraLite',sans-serif;
     letter-spacing: 2px;
-    color: rgb(89, 99, 110);
+    color: $secondary-dark;
     margin: 0px;
 }
 

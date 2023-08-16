@@ -1,6 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 @font-face {
   font-family: "Elianto";
   src: url("../assets/fonts/Elianto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "HelveticaLite";
+  src: url("../assets/fonts/helvetica/helveticaLite.otf") format("opentype");
+}
+@font-face {
+  font-family: "HelveticaUltraLite";
+  src: url("../assets/fonts/helvetica/helveticaUltraLite.ttf") format("truetype");
+}
+@font-face {
+  font-family: "HelveticaBold";
+  src: url("../assets/fonts/helvetica/helveticaBold.otf") format("opentype");
 }
 
 @font-face {
@@ -27,9 +41,13 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
-  font-family: "Elianto" sans-serif;
-  -webkit-font-smoothing: antialiased;
+  font-family: 'Bebas Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1{
+  font-family: 'Bebas Neue', sans-serif, 'HelveticaBold', sans-serif;
 }
 
 code {
