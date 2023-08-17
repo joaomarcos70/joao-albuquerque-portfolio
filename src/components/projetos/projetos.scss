@@ -1,0 +1,39 @@
+@import "../../shared/styles/variables.scss";
+
+.line {
+  width: 48px;
+  height: 2px;
+  background-color: $main-dark;
+}
+
+.container-carrousel{
+  margin: 0px 54px 54px 0px;
+}
+
+.carrousel{
+  background-color: aquamarine;
+  width: 340px;
+  height: 250px;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .chevron {
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+    width: 48px;
+    height: 48px;
+    color: $main-dark;
+  }
+
+  .icon-container{
+    div{
+      width: 48px;
+      height: 48px;
+    }
+  }
+}

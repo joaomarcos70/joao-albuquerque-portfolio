@@ -1,23 +1,21 @@
 import React from "react";
 import "./contact.scss";
 import IconComponent from "../../shared/icons/iconComponent";
+import SvgIcons from "../../shared/icons/iconSvg";
 
 const Contact = () => {
   return (
     <>
       <section className="contact-area">
         <div className="email">
-          <a>joaomarcos70@outlook.com.br</a>
-          <IconComponent icon="arrow-up-right" />
+          joaomarcos70@outlook.com.br
         </div>
         <div className="social">
-          <div className="github">
-              <img src=""></img>
-              <p>instagram</p>
-          </div>
           <div className="linkedin">
-              <img src=""></img>
-              <p>linkedin</p>
+              <SvgIcons name="linkedin" color={"#343E46"} classes={"iconSocial"}></SvgIcons>
+          </div>
+          <div className="github">
+              <SvgIcons name="github" color={"#343E46"} classes={"iconSocial"}></SvgIcons>
           </div>
         </div>
       </section>

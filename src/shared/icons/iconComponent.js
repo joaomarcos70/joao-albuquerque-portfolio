@@ -3,8 +3,21 @@ import * as feather from 'feather-icons';
 import './IconComponent.scss';
 
 const IconComponent = (props) => {
-    
-    const renderedIcon = feather.icons[`${props.icon}`].toSvg();
+  const { icon, size, color, className } = props;
+
+  const iconSize = size || 24;
+  const iconColor = color || 'black';
+
+  const iconStyle = {
+    width: `${iconSize}px`,
+    height: `${iconSize}px`,
+    color: iconColor,
+  };
+
+  const renderedIcon = feather.icons[`${icon}`].toSvg({
+    ...iconStyle,
+    class: className,
+  });
 
   return (
     <div className="icon-container">

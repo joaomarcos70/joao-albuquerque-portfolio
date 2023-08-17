@@ -37,9 +37,21 @@
 
 .cols1{
     display: flex;
-    justify-content: center;
-    width: 45%;
+    justify-content: flex-end;
+    width: 30%;
     flex-direction: column;
+}
+
+.cols2{
+    display: flex;
+    max-width: 50%;
+}
+.cols3{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
 .slogan {
@@ -48,6 +60,7 @@
     width: 100%;
     padding: 0px 54px;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
 h1 {
@@ -58,7 +71,7 @@ h1 {
     margin: 0px 0px 10px;
 }
 p {
-  font-size: 28px;
+  font-size: 24px;
   font-family: 'HelveticaUltraLite',sans-serif;
     letter-spacing: 2px;
     color: $secondary-dark;
@@ -67,15 +80,19 @@ p {
 
 .contato {
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    align-items: baseline;
+    justify-content: flex-start;
     padding: 54px;
-    flex: auto;
 }
 .projeto {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    padding: 54px;
+    //padding: 54px;
     flex: auto;
+}
+
+.empty-div-contact{
+    width: 457px;
+    height: 205px;
 }

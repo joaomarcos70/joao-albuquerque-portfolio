@@ -3,6 +3,8 @@ import "./landing-page-component.scss";
 import Header from "../header/header";
 import Contact from "../contatos/contact";
 import SkillComponent from "../skill-metric/skill";
+import Projetos from "../projetos/projetos";
+import me from './assets/me.png'
 
 const LandingPageComponent = () => {
   const [isClickContato, setClickContato] = useState(false);
@@ -37,15 +39,14 @@ const LandingPageComponent = () => {
         <div className="skills">
           <SkillComponent />
         </div>
+      {isClickContato ? (<div className="contato" color="#ffffff"><Contact /></div>) : <div className="empty-div-contact"></div>}
       </div>
-      {isClickContato ? (
-        <div className="contato" color="#ffffff">
-          <Contact />
-        </div>
-      ) : (
-        ""
-      )}
-      {isClickProjetos ? <div className="projeto">projetos</div> : ""}
+      <div className="cols2">
+        <img src={me}></img>
+      </div>
+      <div className="cols3">
+      {isClickProjetos ? <div className="projeto"><Projetos/></div> : <div></div>}
+      </div>
     </div>
   );
 };
