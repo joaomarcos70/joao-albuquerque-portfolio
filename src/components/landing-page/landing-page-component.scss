@@ -13,6 +13,13 @@
     z-index: 1;
 }
 
+.header-icons{
+    position: absolute;
+    right: 54px;
+    top: 60px;
+    cursor: pointer;
+}
+
 .landing-page::before{
     content: "";
     position: absolute;
