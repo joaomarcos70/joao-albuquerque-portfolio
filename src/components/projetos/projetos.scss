@@ -11,9 +11,27 @@
 }
 
 .carrousel{
-  background-color: aquamarine;
+  box-sizing: border-box;
+  background-color: $main-white;
   width: 340px;
   height: 250px;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  border-radius: 8px;
+  p{
+    font-size: 20px;
+  }
+  h1{
+    font-size: 40px;
+    letter-spacing: 3px;
+  }
+  img{
+    margin-bottom: 10px;
+    border-radius: 8px;
+    width: 56px;
+    height: 56px;
+    }
 }
 
 .display {
