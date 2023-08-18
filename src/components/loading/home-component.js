@@ -68,14 +68,14 @@ const LoadingComponent = () => {
           <div ref={loadingReference} className="color">
             <div className="text-icon">
               <span className="icon">
-                <IconComponent icon="triangle" />
+                <IconComponent icon="terminal" className="power"/>
               </span>
-              <p className="loading-text">CARREGANDO</p>
+              <h1 className="loading-text">CARREGANDO</h1>
             </div>
             {showText ? (
-              <p className={`side-text ${animateTextOut ? "slide-out" : "slide-in"}`}>
+              <h1 className={`side-text ${animateTextOut ? "slide-out" : "slide-in"}`}>
                 {currentSideText}
-              </p>
+              </h1>
             ) : (
               ""
             )}
