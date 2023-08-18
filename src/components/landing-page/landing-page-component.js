@@ -8,8 +8,8 @@ import me from "./assets/me.png";
 import IconComponent from "../../shared/icons/iconComponent";
 
 const LandingPageComponent = () => {
-  const [isClickContato, setClickContato] = useState(false);
-  const [isClickProjetos, setClickProjetos] = useState(false);
+  const [isClickContato, setClickContato] = useState(true);
+  const [isClickProjetos, setClickProjetos] = useState(true);
   const [isClickButton, setIsClickButton] = useState(false);
   const [actionButtonClicked, setActionButtonClicked] = useState("");
 

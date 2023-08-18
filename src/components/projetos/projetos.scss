@@ -11,16 +11,33 @@
 }
 
 .carrousel{
-  box-sizing: border-box;
   background-color: $main-white;
   width: 340px;
   height: 250px;
   display: flex;
-  padding: 20px;
+  padding: 24px;
   flex-direction: column;
   border-radius: 8px;
-  p{
-    font-size: 20px;
+  .text{
+    scrollbar-width: thin;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+  }
+    &::-webkit-scrollbar-track {
+      background: $main-white;
+      border-radius: 100px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $soft-dark;
+      border-radius: 100px;  
+    }
+
+    p{
+      font-size: 20px;
+      text-align: left;
+    }
   }
   h1{
     font-size: 40px;
@@ -32,6 +49,46 @@
     width: 56px;
     height: 56px;
     }
+}
+
+.description{
+  margin-top: 10px;
+  font-size: 20px;
+  color:$main-dark;
+  cursor: pointer;
+
+  &:hover{
+    color: $secondary-dark;
+  }
+}
+
+.carrousel.before{
+  animation: before 0.9s ease-in-out forwards;
+}
+.carrousel.after{
+  animation: after 0.9s ease-in-out forwards;
+}
+
+@keyframes after {
+  from{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes before {
+  from{
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 
 .display {
@@ -46,6 +103,10 @@
     width: 48px;
     height: 48px;
     color: $main-dark;
+
+    &:hover{
+      color: $secondary-dark;
+    }
   }
 
   .icon-container{
