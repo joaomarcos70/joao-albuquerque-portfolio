@@ -27,46 +27,36 @@ const LandingPageComponent = () => {
     setActionButtonClicked(event.target.id);
   };
 
+  const renderSloganComponent = () => {
+    return (
+      <div className="slogan">
+        <h1>João Albuquerque</h1>
+        <p>
+          Desenvolvedor frontend experiente comprometido com soluções de alta
+          qualidade. Buscando desafios e colaboração em projetos inovadores.
+        </p>
+      </div>
+    );
+  }
+
   return (
-    <div className="landing-page">
-      <GlassComponent>
-        <div className="header-icons">
-          <IconComponent icon="moon" size="32" color="#343E46"/>
+      <div className="landing-page-container">
+        <div className="container">
+          <GlassComponent>
+            <Header />
+              <div className="cols">
+                <div className="info-container">
+                  {renderSloganComponent()}
+                  <SkillComponent/>
+                  <Contact/>
+                </div>
+                <div className="projects">
+                  <Projetos/>
+                </div>
+              </div>
+          </GlassComponent>
         </div>
-        <Header handleClick={(event) => handleClickBtn(event)} />
-        <div className="cols1">
-          <div className="slogan">
-            <h1>João Albuquerque</h1>
-            <p>
-              Desenvolvedor frontend experiente comprometido com soluções de alta
-              qualidade. Buscando desafios e colaboração em projetos inovadores.
-            </p>
-          </div>
-          <div className="skills">
-            <SkillComponent />
-          </div>
-          {isClickContato ? (
-            <div className="contato" color="#ffffff">
-              <Contact />
-            </div>
-          ) : (
-            <div className="empty-div-contact"></div>
-          )}
-        </div>
-        <div className="cols2">
-          {/* <img src={me}></img> */}
-        </div>
-        <div className="cols3">
-          {isClickProjetos ? (
-            <div className="projeto">
-              <Projetos />
-            </div>
-          ) : (
-            <div></div>
-          )}
-        </div>
-      </GlassComponent>
-    </div>
+      </div>
   );
 };
 

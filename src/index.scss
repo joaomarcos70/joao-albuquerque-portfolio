@@ -1,46 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-@font-face {
-  font-family: "Elianto";
-  src: url("../assets/fonts/Elianto-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "HelveticaLite";
-  src: url("../assets/fonts/helvetica/helveticaLite.otf") format("opentype");
-}
-@font-face {
-  font-family: "HelveticaUltraLite";
-  src: url("../assets/fonts/helvetica/helveticaUltraLite.ttf") format("truetype");
-}
-@font-face {
-  font-family: "HelveticaBold";
-  src: url("../assets/fonts/helvetica/helveticaBold.otf") format("opentype");
-}
 
-@font-face {
-  font-family: "GoodTime";
-  src: url("../assets/fonts/GOODTIME.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "BloodWaxxRegular";
-  src: url("../assets/fonts/bloodwaxx/Bloodwax-KW8y.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "BloodWaxxBold";
-  src: url("../assets/fonts/bloodwaxx/Bloodwaxbold-vgJE.otf") format("opentype");
-  font-weight: 700;
-  font-style: normal;
-}
-
-html,
-body {
+* {
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
+  box-sizing: border-box;
+  color: #fff;
   font-family: 'Bebas Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

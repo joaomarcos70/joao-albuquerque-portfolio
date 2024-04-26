@@ -1,80 +1,39 @@
 @import '../../shared/styles/variables.scss';
 
-.landing-page {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    display: flex;
-    background: url('../../../assets/images/glass-wp-6.jpg');
+.landing-page-container, html, body {
+    height: 100vh
+}
+
+.landing-page-container {
+    overflow-x: hidden;
+    background-color: $dark;
+    background-image: url('../../../assets/images/glass-wp-6.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: center;
-}
 
-.header-icons{
-    position: absolute;
-    right: 54px;
-    top: 60px;
-    cursor: pointer;
-}
+    .container{
+        height: 100%;
 
-.cols1{
-    display: flex;
-    justify-content: flex-end;
-    width: 30%;
-    flex-direction: column;
-}
+        .cols{
+            display: flex;
+            height: calc(100% - 100px);
+            gap: 32px;
+            .info-container{
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                gap: 30%;
+            }
 
-.cols2{
-    display: flex;
-    max-width: 50%;
-}
-.cols3{
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
-}
+            .projects{
+                display: flex;
+                width: 50%;
+                justify-content: flex-end;
+                align-self: flex-end;
+            }
+        }
 
-.slogan {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 0px 54px;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-h1{
-    font-size: 80px;
-    font-family: "Bebas Neue", sans-serif;
-    letter-spacing: 4px;
-    color: $main-dark;
-    margin: 0px 0px 10px;
-}
-p {
-  font-size: 24px;
-  font-family: 'HelveticaUltraLite',sans-serif;
-    letter-spacing: 2px;
-    color: $secondary-dark;
-    margin: 0px;
-}
-
-.contato {
-    display: flex;
-    align-items: baseline;
-    justify-content: flex-start;
-    padding: 54px;
-}
-.projeto {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    //padding: 54px;
-    flex: auto;
-}
-
-.empty-div-contact{
-    width: 457px;
-    height: 205px;
+    }
 }
