@@ -15,6 +15,7 @@
 
     .container{
         height: 100%;
+        padding: 64px;
 
         .cols{
             display: flex;
@@ -24,7 +25,7 @@
                 display: flex;
                 flex-direction: column;
                 width: 50%;
-                gap: 30%;
+                gap: 25%;
             }
 
             .projects{
@@ -37,3 +38,15 @@
 
     }
 }
+
+.slogan{
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    h1{
+        font-size: 54px;
+    }
+    p{
+        font-size: 22px;
+    }
+}   

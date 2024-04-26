@@ -1,6 +1,5 @@
 import React from "react";
 import "./skill.scss";
-import SvgIcons from "../../shared/icons/iconSvg";
 const skillData = [
   {
     name: "ANGULAR",
@@ -19,7 +18,7 @@ const skillData = [
     nivel: 3,
   },
   {
-    name: "SASS",
+    name: "SCSS",
     nivel: 3,
   },
 ];

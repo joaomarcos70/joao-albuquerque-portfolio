@@ -2,18 +2,18 @@
 
 .contact-area{
     .email{
-        font-size: 22px;
+        font-size: 20px;
         display: flex;
         align-items: center;
         padding-bottom: 20px;
-        color: $main-dark;
+        color: $main-white;
     }
     
     .social{
         display: flex;
     }
     .social p:nth-child(n){
-        color:$main-dark;
+        color:$main-white;
         font-family: 'Bebas Neue', sans-serif;
         font-size: 20px;
         margin-right: 20px;
@@ -24,8 +24,8 @@
 }
 
 .iconSocial{
-    height: 48px;
-    width: 48px;
+    height: 26px;
+    width: 26px;
     margin-right:24px;
     cursor:pointer;
 }

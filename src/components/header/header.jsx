@@ -6,13 +6,13 @@ const Header = ({ handleClick }) => {
     <nav>
       <ul className="header">
         <li id="projetos" onClick={handleClick}>
-          Projetos
+          projetos
         </li>
         <li id="contato" onClick={handleClick}>
-          Contato
+          contato
         </li>
         <li id="sobre" onClick={handleClick}>
-          Sobre
+          sobre
         </li>
       </ul>
     </nav>

@@ -11,7 +11,10 @@
 }
 
 .carrousel{
-  background-color: $main-white;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: solid 1px rgba(255, 255, 255, 0.26);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   width: 340px;
   height: 250px;
   display: flex;
@@ -35,13 +38,12 @@
     }
 
     p{
-      font-size: 20px;
+      font-size: 18px;
       text-align: left;
     }
   }
   h1{
-    font-size: 40px;
-    letter-spacing: 3px;
+    font-size: 38px;
   }
   img{
     margin-bottom: 10px;

@@ -11,18 +11,31 @@
         font-size: 30px;
         background-color: transparent;
         color: $main-white;
+        &::after{
+            content: '';
+            display: block;
+            width: 0;
+            height: 1px;
+            background-color: $main-white;
+            transition: width 0.3s;
+        }
         &:hover{
             cursor: pointer;
-            animation: hover-text 0.5s ease forwards;
-            transition: all;
+            //animation: hover-text 0.5s ease forwards;
+            &::after {
+                width: 100%; // Isto fará com que o pseudo-elemento se expanda quando hover
+            }
         }
 
-        @keyframes hover-text {
+/*         @keyframes hover-text {
             to{
                 color: $secondary-white;
                 scale: 1.1;
                 font-size: 33px;
+                &li::after{
+                    width: 100%;
+                }
             }
-        }
+        } */
     }
 }

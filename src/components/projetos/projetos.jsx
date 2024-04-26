@@ -10,27 +10,27 @@ const Projetos = () => {
   const carrouselData = [
     {
       src: itau,
-      title: "itau",
+      title: "itaú",
       description:
-      "Plataforma de consultoria financeira integrada, aprimorando eficiência e experiência do cliente no Itaú.",
+      "plataforma de consultoria financeira integrada, aprimorando eficiência e experiência do cliente no Itaú.",
     },
     {
       src: omnik,
       title: "omnik",
       description:
-      "Projeto voltado a área de marketplace, sendo a Omnik um marketplace totalmente white label flexível e adaptável ao e-commerce do cliente.",
+      "projeto voltado a área de marketplace, sendo a Omnik um marketplace totalmente white label flexível e adaptável ao e-commerce do cliente.",
     },
     {
       src: itau,
-      title: "itau",
+      title: "itaú",
       description:
-        "Projeto centralizado em documentação, API's e suporte, otimizando processos e mantendo padrões de qualidade no Itaú.",
+        "projeto centralizado em documentação, API's e suporte, otimizando processos e mantendo padrões de qualidade no Itaú.",
     },
     {
       src: fcamara,
       title: "fcamara",
       description:
-        "Plataforma integrada que facilita a administração abrangente, incluindo criação de vagas, gerenciamento de consultores, controle de projetos e despesas, aprovações e geração de documentos.",
+        "plataforma integrada que facilita a administração abrangente, incluindo criação de vagas, gerenciamento de consultores, controle de projetos e despesas, aprovações e geração de documentos.",
     },
   ];
 
@@ -52,7 +52,7 @@ const Projetos = () => {
   };
 
   return (
-    <section className="container">
+    <section className="container-projects">
       <div className="display">
         <div className="icon" onClick={next}>
           <IconComponent icon="chevron-right" className="chevron" />
