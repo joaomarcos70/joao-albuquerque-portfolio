@@ -3,6 +3,7 @@
 .skill-area{
     display: flex;
     gap: 16px;
+    width: fit-content;
 }
 
 .chip{
@@ -30,5 +31,11 @@
         .name{
             color: $main-dark;
         }
+    }
+}
+
+@media (max-width: 811px){
+    .skill-area{
+        flex-wrap: wrap;
     }
 }

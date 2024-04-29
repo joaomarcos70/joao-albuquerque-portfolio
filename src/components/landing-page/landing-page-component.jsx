@@ -4,7 +4,7 @@ import Header from "../header/header";
 import Contact from "../contatos/contact";
 import SkillComponent from "../skill-metric/skill";
 import Projetos from "../projetos/projetos";
-import me from "./assets/me.png";
+import me from "./assets/me-5.png";
 import IconComponent from "../../shared/icons/iconComponent";
 import GlassComponent from "../glass/glass.component";
 
@@ -50,6 +50,9 @@ const LandingPageComponent = () => {
                   <SkillComponent/>
                   <Contact/>
                 </div>
+{/*                   <div className="img-container">
+                    <img src={me}/>
+                  </div> */}
                 <div className="projects">
                   <Projetos/>
                 </div>

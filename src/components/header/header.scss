@@ -8,7 +8,7 @@
 
     li {
         padding: 30px;
-        font-size: 30px;
+        font-size: 22px;
         background-color: transparent;
         color: $main-white;
         &::after{
@@ -21,21 +21,9 @@
         }
         &:hover{
             cursor: pointer;
-            //animation: hover-text 0.5s ease forwards;
             &::after {
-                width: 100%; // Isto fará com que o pseudo-elemento se expanda quando hover
+                width: 100%;
             }
         }
-
-/*         @keyframes hover-text {
-            to{
-                color: $secondary-white;
-                scale: 1.1;
-                font-size: 33px;
-                &li::after{
-                    width: 100%;
-                }
-            }
-        } */
     }
 }

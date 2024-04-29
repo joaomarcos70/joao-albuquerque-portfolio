@@ -49,4 +49,29 @@
     p{
         font-size: 22px;
     }
-}   
+}
+
+
+
+.img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    img{
+        width: 480px;
+        border-radius: 50%;	
+    }
+}
+
+ @media (max-width: 1305px){
+    .cols{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .info-container{
+            width: 100% !important;
+            gap: 32px !important;
+        }
+    }
+}

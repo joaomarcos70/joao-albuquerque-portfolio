@@ -1,13 +1,13 @@
 @import "../../shared/styles/variables.scss";
 
 .line {
-  width: 48px;
+  width: 24px;
   height: 2px;
   background-color: $main-dark;
 }
 
 .container-carrousel{
-  margin: 0px 54px 54px 0px;
+  margin: 8px 0px 0px 0px;
 }
 
 .carrousel{
@@ -102,8 +102,8 @@
     cursor: pointer;
     margin: 0px;
     padding: 0px;
-    width: 48px;
-    height: 48px;
+    width: 24px;
+    height: 24px;
     color: $main-dark;
 
     &:hover{
@@ -113,8 +113,8 @@
 
   .icon-container{
     div{
-      width: 48px;
-      height: 48px;
+      width: 24px;
+      height: 24px;
     }
   }
 }
