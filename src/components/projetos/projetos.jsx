@@ -54,12 +54,15 @@ const Projetos = () => {
   return (
     <section className="container-projects">
       <div className="display">
-        <div className="icon" onClick={next}>
-          <IconComponent icon="chevron-right" className="chevron" />
-        </div>
-        <div className="line"></div>
-        <div className="icon" onClick={before}>
-          <IconComponent icon="chevron-left" className="chevron" />
+      <label>projetos</label>
+        <div className="chevrons">
+          <div className="icon" onClick={next}>
+            <IconComponent icon="chevron-left" className="chevron" />
+          </div>
+          <div className="line"></div>
+          <div className="icon" onClick={before}>
+            <IconComponent icon="chevron-right" className="chevron" />
+          </div>
         </div>
       </div>
 
@@ -78,7 +81,7 @@ const Projetos = () => {
                 <p>{item.description}</p>
               </div>
             </div>
-            <div className="description" onClick={() => window.open('https://www.linkedin.com/in/joaoalbuquerq/')}>
+            <div className="description" onClick={() => window.open('https://www.linkedin.com/in/joaoalbuquerq/details/experience/')}>
               <a>saiba mais</a>
             </div>
           </section>

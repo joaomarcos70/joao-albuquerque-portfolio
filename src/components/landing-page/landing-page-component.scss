@@ -1,77 +1,102 @@
-@import '../../shared/styles/variables.scss';
+@import "../../shared/styles/variables.scss";
 
-.landing-page-container, html, body {
-    height: 100vh
+.landing-page-container,
+html,
+body {
+    height: 100vh;
 }
 
 .landing-page-container {
     overflow-x: hidden;
     background-color: $dark;
-    background-image: url('../../../assets/images/glass-wp-6.jpg');
+    background-image: url("../../../assets/images/glass-wp-6.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
 
-    .container{
+    .container {
         height: 100%;
         padding: 64px;
 
-        .cols{
+        .cols {
             display: flex;
-            height: calc(100% - 100px);
+            height: 90%;
             gap: 32px;
-            .info-container{
+            .info-container {
                 display: flex;
                 flex-direction: column;
+                justify-content: end;
                 width: 50%;
-                gap: 25%;
+                gap: 10%;
             }
 
-            .projects{
+            .projects {
                 display: flex;
-                width: 50%;
-                justify-content: flex-end;
-                align-self: flex-end;
             }
         }
-
     }
 }
 
-.slogan{
+.slogan {
     display: flex;
     gap: 8px;
     flex-direction: column;
-    h1{
-        font-size: 54px;
+    h1 {
+        font-size: 32px;
     }
-    p{
-        font-size: 22px;
+    p {
+        font-size: 18px;
     }
 }
 
+img {
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    width: 50%;
+    height: auto;
+/*     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); */
+}
 
-
-.img-container{
+.footer-container{
+    padding-top: 8px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 33%;
-    img{
-        width: 480px;
-        border-radius: 50%;	
+    .footer-content{
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        align-items: center;
+        .footer-icons{
+            display: flex;
+            gap: 8px;
+        }
     }
 }
 
- @media (max-width: 1305px){
-    .cols{
+@media (max-width: 1305px) {
+    .cols {
         display: flex;
         flex-direction: column;
         align-items: center;
-        .info-container{
+        .slogan {
+            h1 {
+                font-size: 28px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+        .info-container {
             width: 100% !important;
             gap: 32px !important;
+        }
+        .projects {
+            width: 100% !important;
+            justify-content: center;
         }
     }
 }

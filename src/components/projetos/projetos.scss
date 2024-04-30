@@ -4,6 +4,7 @@
   width: 24px;
   height: 2px;
   background-color: $main-dark;
+  transform: rotate3d(0, 0, 1, 90deg);
 }
 
 .container-carrousel{
@@ -43,7 +44,7 @@
     }
   }
   h1{
-    font-size: 38px;
+    font-size: 28px;
   }
   img{
     margin-bottom: 10px;
@@ -95,8 +96,18 @@
 
 .display {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-end;
+  justify-content: space-between;
+
+  label {
+    font-size: 20px;
+  }
+
+  .chevrons{
+    display: flex;
+    align-items: center;
+  }
 
   .chevron {
     cursor: pointer;
@@ -115,6 +126,33 @@
     div{
       width: 24px;
       height: 24px;
+    }
+  }
+}
+
+
+@media(max-width: 1305px){
+  .container-carrousel, .carrousel{
+    width: 100%;
+  }
+  .carrousel{
+    p{
+      font-size: 12px !important;
+    }
+    h1{
+      font-size: 24px;
+    }
+  }
+  .description{
+    margin: 4px 0px 0px 0px;
+    a{
+      font-size: 14px;
+    }
+  }
+
+  .display{
+    label{
+      font-size: 14px;
     }
   }
 }
