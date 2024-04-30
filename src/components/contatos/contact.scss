@@ -2,37 +2,30 @@
 
 .contact-area{
     .email{
-        font-size: 22px;
-        display: flex;
-        align-items: center;
-        padding-bottom: 20px;
-        color: $main-dark;
+        font-size: 14px;
+        word-break: break-all;
     }
     
     .social{
         display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
     }
     .social p:nth-child(n){
-        color:$main-dark;
-        font-family: 'Bebas Neue', sans-serif;
-        font-size: 20px;
-        margin-right: 20px;
+        color:$main-white;
+        font-size: 14px;
     }
-    opacity: 0;
-    animation: fade-in ease-in 1s forwards;
-    transform: translateX(-100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .iconSocial{
-    height: 48px;
-    width: 48px;
+    height: 26px;
+    width: 26px;
     margin-right:24px;
     cursor:pointer;
-}
-
-@keyframes fade-in {
-    to{
-        transform: translateX(0%);
-        opacity: 1;
-    }
 }

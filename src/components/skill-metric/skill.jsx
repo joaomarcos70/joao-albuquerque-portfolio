@@ -1,25 +1,24 @@
 import React from "react";
 import "./skill.scss";
-import SvgIcons from "../../shared/icons/iconSvg";
 const skillData = [
   {
-    name: "ANGULAR",
+    name: "angular",
     nivel: 3,
   },
   {
-    name: "REACT",
+    name: "react",
     nivel: 3,
   },
   {
-    name: "TYPESCRIPT",
+    name: "typescript",
     nivel: 3,
   },
   {
-    name: "JAVASCRIPT",
+    name: "javascript",
     nivel: 3,
   },
   {
-    name: "SASS",
+    name: "scss",
     nivel: 3,
   },
 ];
@@ -29,7 +28,7 @@ const SkillComponent = () => {
     <>
     <section className="skill-area">
       {skillData.map((item)=>(
-        <div className="chip">
+        <div className="chip" onClick={()=> window.open('https://www.linkedin.com/in/joaoalbuquerq/overlay/top-skills-details/')}>
           <h1 className="name">{item.name}</h1>
         </div>
       ))}

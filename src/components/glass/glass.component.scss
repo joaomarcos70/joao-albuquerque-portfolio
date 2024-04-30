@@ -1,0 +1,24 @@
+.glass{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 40px;
+    padding: 32px;
+    width: 100%;
+    height: 100%;
+    border: solid 1px rgba(255, 255, 255, 0.26);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    position: relative;
+
+    .glass-content{
+        height: 100%;
+
+        align-items: center;
+    }
+}
+
+@media (max-width: 1305px){
+    .glass{
+        height: auto;
+    }
+}

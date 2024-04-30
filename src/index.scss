@@ -1,60 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-@font-face {
-  font-family: "Elianto";
-  src: url("../assets/fonts/Elianto-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "HelveticaLite";
-  src: url("../assets/fonts/helvetica/helveticaLite.otf") format("opentype");
-}
-@font-face {
-  font-family: "HelveticaUltraLite";
-  src: url("../assets/fonts/helvetica/helveticaUltraLite.ttf") format("truetype");
-}
-@font-face {
-  font-family: "HelveticaBold";
-  src: url("../assets/fonts/helvetica/helveticaBold.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "GoodTime";
-  src: url("../assets/fonts/GOODTIME.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "BloodWaxxRegular";
-  src: url("../assets/fonts/bloodwaxx/Bloodwax-KW8y.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "BloodWaxxBold";
-  src: url("../assets/fonts/bloodwaxx/Bloodwaxbold-vgJE.otf") format("opentype");
-  font-weight: 700;
-  font-style: normal;
-}
-
-html,
-body {
+* {
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
-  font-family: 'Bebas Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-variant: normal;
+  letter-spacing: 0px;
+  font-weight: 300;
 }
 
 h1{
-  font-family: 'Bebas Neue', sans-serif, 'HelveticaBold', sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  //font-family: 'Bebas Neue', sans-serif, 'HelveticaBold', sans-serif;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-.noise {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 243 243'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulance type='franctalNoise'%0AbaseFrequency='2.3'%3E%3C/feTurbulance%3E%3C/filter%3E%3Crect width='100%25' height='100%25'%0Afilter='url(%23noiseFilter)'/%3E%3C/svg%3E ");
-}
+} */
