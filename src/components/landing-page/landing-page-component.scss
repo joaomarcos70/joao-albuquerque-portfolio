@@ -1,4 +1,6 @@
 @import "../../shared/styles/variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 
 .landing-page-container,
 html,
@@ -9,7 +11,7 @@ body {
 .landing-page-container {
     overflow-x: hidden;
     background-color: $dark;
-    background-image: url("../../../assets/images/glass-wp-6.jpg");
+    background-image: url("../../../assets/images/glass-wp-full-size.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -26,7 +28,7 @@ body {
             .info-container {
                 display: flex;
                 flex-direction: column;
-                justify-content: end;
+                justify-content: center;
                 width: 50%;
                 gap: 10%;
             }
@@ -43,10 +45,17 @@ body {
     gap: 8px;
     flex-direction: column;
     h1 {
-        font-size: 32px;
+        font-size: 133px;
+        font-family: "Bebas Neue", sans-serif !important;
+        line-height: 1;
+        letter-spacing: 3px;
+        text-wrap: nowrap;
+    }
+    h1.sub{
+        font-size: 36px;
     }
     p {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 
@@ -56,7 +65,7 @@ img {
     border-radius: 50%;
     width: 50%;
     height: auto;
-/*     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+/*  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px); */
 }
@@ -90,10 +99,13 @@ img {
         align-items: center;
         .slogan {
             h1 {
-                font-size: 26px;
+                font-size: 32px;
+            }
+            h1.sub{
+                font-size: 18px;
             }
             p {
-                font-size: 18px;
+                font-size: 16px;
             }
         }
         .info-container {
@@ -104,5 +116,11 @@ img {
             width: 100% !important;
             justify-content: center;
         }
+    }
+}
+
+@media(max-width: 1305px){
+    .landing-page-container{
+        background-image: url('../../../assets/images/glass-wp-small.png');
     }
 }

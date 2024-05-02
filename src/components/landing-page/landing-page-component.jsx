@@ -10,10 +10,14 @@ const LandingPageComponent = () => {
   const renderSloganComponent = () => {
     return (
       <div className="slogan">
-        <h1>João Albuquerque</h1>
+        <h1>JOÃO ALBUQUERQUE</h1>
+        <h1 className="sub"><span style={{color: 'orange'}}> desenvolvedor frontend</span></h1>
         <p>
-          Desenvolvedor frontend experiente comprometido com soluções de alta
-          qualidade. Buscando desafios e colaboração em projetos inovadores.
+          Minha jornada começou no desenvolvimento full stack, mas foi no 
+          front que descobri minha verdadeira paixão, transformando códigos em experiências visuais marcantes.
+          Com 24 anos, curto muito assistir filmes, séries, além de jogar video games, hobbies que aguçam minha
+          criatividade e inspiram meu desenvolvimento. Estou sempre em busca de projetos que desafiem
+          minhas habilidades e ampliem minha visão de futuro.
         </p>
       </div>
     );

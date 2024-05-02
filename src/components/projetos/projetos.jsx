@@ -4,33 +4,45 @@ import IconComponent from "../../shared/icons/iconComponent";
 import itau from "../../shared/images/projects/itau.jpg";
 import omnik from "../../shared/images/projects/omnik.jpg";
 import fcamara from "../../shared/images/projects/fcamara.jpg";
+import picpay from "../../shared/images/projects/picpay.png";
 import classNames from "classnames";
 
 const Projetos = () => {
   const carrouselData = [
     {
+      src: picpay,
+      title: "desafio de contratação picpay",
+      description:
+      "aplicação de agendamento de pagamento que inclui funcionalidades de login e CRUD.",
+      link:'https://github.com/joaomarcos70/frontend-challenge-picpay'
+    },
+     {
       src: itau,
       title: "itaú",
       description:
       "plataforma de consultoria financeira integrada, aprimorando eficiência e experiência do cliente no Itaú.",
+      link:'https://www.linkedin.com/in/joaoalbuquerq/details/experience/'
     },
     {
       src: omnik,
       title: "omnik",
       description:
       "projeto voltado a área de marketplace, sendo a Omnik um marketplace totalmente white label flexível e adaptável ao e-commerce do cliente.",
+      link:'https://www.linkedin.com/in/joaoalbuquerq/details/experience/'
     },
     {
       src: itau,
       title: "itaú",
       description:
         "projeto centralizado em documentação, API's e suporte, otimizando processos e mantendo padrões de qualidade no Itaú.",
+        link:'https://www.linkedin.com/in/joaoalbuquerq/details/experience/'
     },
     {
       src: fcamara,
       title: "fcamara",
       description:
         "plataforma integrada que facilita a administração abrangente, incluindo criação de vagas, gerenciamento de consultores, controle de projetos e despesas, aprovações e geração de documentos.",
+        link:'https://www.linkedin.com/in/joaoalbuquerq/details/experience/'
     },
   ];
 
@@ -55,6 +67,7 @@ const Projetos = () => {
     <section className="container-projects">
       <div className="display">
       <label>projetos</label>
+      {carrouselData.length > 1 && ( 
         <div className="chevrons">
           <div className="icon" onClick={next}>
             <IconComponent icon="chevron-left" className="chevron" />
@@ -64,6 +77,7 @@ const Projetos = () => {
             <IconComponent icon="chevron-right" className="chevron" />
           </div>
         </div>
+        )}
       </div>
 
       {carrouselData.map((item, index) =>
@@ -81,7 +95,7 @@ const Projetos = () => {
                 <p>{item.description}</p>
               </div>
             </div>
-            <div className="description" onClick={() => window.open('https://www.linkedin.com/in/joaoalbuquerq/details/experience/')}>
+            <div className="description" onClick={() => window.open(item.link)}>
               <a>saiba mais</a>
             </div>
           </section>

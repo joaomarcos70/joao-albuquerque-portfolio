@@ -2,7 +2,7 @@
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 40px;
-    padding: 32px;
+    padding: 80px 32px 32px 80px;
     width: 100%;
     height: 100%;
     border: solid 1px rgba(255, 255, 255, 0.26);
@@ -19,6 +19,8 @@
 @media (max-width: 1305px){
     .glass{
         height: auto;
+        padding: 32px;
+
     }
     
 }
