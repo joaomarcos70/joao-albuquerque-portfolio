@@ -1,6 +1,5 @@
 @import "../../shared/styles/variables.scss";
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 .landing-page-container,
 html,
@@ -51,7 +50,7 @@ body {
         letter-spacing: 3px;
         text-wrap: nowrap;
     }
-    h1.sub{
+    h1.sub {
         font-size: 36px;
     }
     p {
@@ -65,21 +64,21 @@ img {
     border-radius: 50%;
     width: 50%;
     height: auto;
-/*  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /*  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px); */
 }
 
-.footer-container{
+.footer-container {
     padding-top: 8px;
     display: flex;
     justify-content: center;
-    .footer-content{
+    .footer-content {
         display: flex;
         flex-direction: row;
         gap: 8px;
         align-items: center;
-        .footer-icons{
+        .footer-icons {
             display: flex;
             gap: 8px;
         }
@@ -101,7 +100,7 @@ img {
             h1 {
                 font-size: 32px;
             }
-            h1.sub{
+            h1.sub {
                 font-size: 18px;
             }
             p {
@@ -119,8 +118,47 @@ img {
     }
 }
 
-@media(max-width: 1305px){
-    .landing-page-container{
-        background-image: url('../../../assets/images/glass-wp-small.png');
+@media (max-width: 1305px) {
+    .landing-page-container {
+        background-image: url("../../../assets/images/glass-wp-small.png");
+    }
+}
+
+@media (max-height: 1036px) {
+    .info-container {
+        gap: 6% !important;
+    }
+}
+
+@media (max-width: 1975px) {
+    .slogan {
+        h1 {
+            font-size: 96px;
+        }
+        h1.sub {
+            font-size: 24px;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+}
+@media (max-width: 1561px) {
+    .info-container {
+        gap: 3% !important;
+        .slogan, .skill-area, .projects{
+            scale: 0.9
+        }
+    }
+    .slogan {
+        h1 {
+            font-size: 70px;
+        }
+        h1.sub {
+            font-size: 18px;
+        }
+        p {
+            font-size: 14px;
+        }
     }
 }

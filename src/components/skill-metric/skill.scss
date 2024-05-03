@@ -3,7 +3,6 @@
 .skill-area{
     display: flex;
     gap: 16px;
-    width: fit-content;
 }
 
 .chip{
@@ -31,6 +30,16 @@
         .name{
             color: $main-dark;
         }
+    animation: hoverSkill 0.3s ease-in-out forwards;
+
+    @keyframes hoverSkill {
+        from{
+            opacity: 0.5;
+        }
+        to{
+            opacity: 1;
+        }
+    }
     }
 }
 

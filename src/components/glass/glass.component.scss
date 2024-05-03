@@ -1,6 +1,6 @@
-.glass{
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+.glass {
+    //background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(22px);
     border-radius: 40px;
     padding: 80px 32px 32px 80px;
     width: 100%;
@@ -9,18 +9,23 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
     position: relative;
+    position: relative;
+    background: radial-gradient(
+            circle at calc(var(--cursor-x) * 1px) calc(var(--cursor-y) * 1px),
+            hsla(232.62deg 78% 48% / 17%),
+            transparent 300px
+        ),
+        rgba(255, 255, 255, 0);
+    background-attachment: fixed;
 
-    .glass-content{
+    .glass-content {
         height: 100%;
         align-items: center;
     }
 }
-
-@media (max-width: 1305px){
-    .glass{
+@media (max-width: 1305px), (max-height: 1186px) {
+    .glass {
         height: auto;
         padding: 32px;
-
     }
-    
 }

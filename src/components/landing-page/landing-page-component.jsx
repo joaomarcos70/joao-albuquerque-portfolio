@@ -11,7 +11,7 @@ const LandingPageComponent = () => {
     return (
       <div className="slogan">
         <h1>JOÃO ALBUQUERQUE</h1>
-        <h1 className="sub"><span style={{color: 'orange'}}> desenvolvedor frontend</span></h1>
+        <h1 className="sub"><span style={{color: 'rgb(255 209 40)'}}> desenvolvedor frontend</span></h1>
         <p>
           Minha jornada começou no desenvolvimento full stack, mas foi no 
           front que descobri minha verdadeira paixão, transformando códigos em experiências visuais marcantes.
