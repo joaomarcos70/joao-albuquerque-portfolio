@@ -94,9 +94,9 @@ const Projetos = () => {
               <div className="text">
                 <p>{item.description}</p>
               </div>
-            </div>
             <div className="description" onClick={() => window.open(item.link)}>
               <a>saiba mais</a>
+            </div>
             </div>
           </section>
         ) : null
