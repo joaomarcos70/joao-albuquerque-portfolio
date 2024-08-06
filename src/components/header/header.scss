@@ -23,22 +23,29 @@ nav{
         flex: 1 1 auto;
         justify-content: center;
     }
-    .logo{
+    .logo {
         border-radius: 8px;
         font-size: 30px;
-        padding: 30px;
+        padding: 30px 64px;
         font-weight: 700;
         color: $main-white;
         background-color: transparent;
         display: block;
-
-        &:hover{
+        transition: color 0.5s;
+    
+        &:hover {
             cursor: pointer;
-            color: $light-blue;
-            animation: openLogo 1s ease-in-out infinite;
-            backdrop-filter: blur(10px);
+            animation: coloredLogo 1s linear forwards;
         }
-
+    }
+    
+    @keyframes coloredLogo {
+        0% {
+            color: $main-white;
+        }
+        100% {
+            color: $highlight;
+        }
     }
     li {
         padding: 30px;

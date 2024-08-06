@@ -14,7 +14,9 @@ const Header = ({ handleClick }) => {
 
   return (
       <ul className="header">
-        <div className="logo">JA</div>
+        <div className="logo">
+          JA
+        </div>
 
         <div className="items">
           <li id="projetos" onClick={handleClick}>
@@ -25,6 +27,9 @@ const Header = ({ handleClick }) => {
           </li>
           <li id="sobre" onClick={handleClick}>
             sobre
+          </li>
+          <li id="content-create" onClick={handleClick}>
+            criador de conteúdo
           </li>
         </div>
       </ul>
