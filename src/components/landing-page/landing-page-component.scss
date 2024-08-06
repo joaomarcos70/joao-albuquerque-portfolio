@@ -10,11 +10,6 @@ body {
 .landing-page-container {
     overflow-x: hidden;
     background-color: $dark;
-    background-image: url("../../../assets/images/glass-wp-full-size.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
 
     .container {
         height: 100%;
@@ -115,12 +110,6 @@ img {
             width: 100% !important;
             justify-content: center;
         }
-    }
-}
-
-@media (max-width: 1305px) {
-    .landing-page-container {
-        background-image: url("../../../assets/images/glass-wp-small.png");
     }
 }
 

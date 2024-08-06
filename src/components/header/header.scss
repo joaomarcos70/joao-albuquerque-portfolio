@@ -1,11 +1,45 @@
 @import '../../shared/styles/variables.scss';
 
+nav{
+    position: sticky;
+    top: 0;
+}
 .header{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     max-height: 400px;
     list-style: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(0px);
+    z-index: 1000;
 
+    .items{
+        display: flex;
+        background: transparent;
+        flex: 1 1 auto;
+        justify-content: center;
+    }
+    .logo{
+        border-radius: 8px;
+        font-size: 30px;
+        padding: 30px;
+        font-weight: 700;
+        color: $main-white;
+        background-color: transparent;
+        display: block;
+
+        &:hover{
+            cursor: pointer;
+            color: $light-blue;
+            animation: openLogo 1s ease-in-out infinite;
+            backdrop-filter: blur(10px);
+        }
+
+    }
     li {
         padding: 30px;
         font-size: 22px;
@@ -24,6 +58,23 @@
             &::after {
                 width: 100%;
             }
+        }
+    }
+}
+
+.header-scrolled{
+    @extend .header;
+    backdrop-filter: blur(10px);
+    animation: scrollingEffect;
+    transition: linear 0.4s all;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
+    @keyframes scrollingEffect {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
         }
     }
 }
