@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #000000;
   color: #fff;
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -24,6 +25,15 @@
   &::-webkit-scrollbar-thumb {
     background: $soft-dark !important;
     border-radius: 100px !important;  
+  }
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 768px){
+    justify-content: center;
   }
 }
 

@@ -1,0 +1,134 @@
+@import '../../shared/styles/variables.scss';
+
+.slogan-container{
+    padding: 64px;
+    display: flex;
+    align-items: center;
+    flex: 1 0 calc(100vh - 97px);
+    justify-content: center;
+
+.slogan-content{
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    gap: 16px;
+    h1{
+        font-size: 64px;
+        font-weight: 700;
+    }
+    h2{
+        font-size: 48px;
+        font-weight: 600;
+    }
+
+    p.subtext{
+        max-width: 700px;
+        font-size: 24px;
+        font-weight: 300;
+    }
+
+    .highlight{
+        cursor: pointer;
+        color: $highlight;
+    }
+
+    .cv-button{
+        margin-top: 16px;
+        height: 42px;
+        width: 50%;
+        border-radius: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        transition: scale 0.5s;
+        overflow: hidden;
+        
+        &::before{
+            content: '';
+            background: $rainbow-color;
+            position: absolute;
+            width: 100%;
+            height: 850%;
+            border-radius: 16px;
+            z-index: 1;        
+        }
+        
+        &::after{
+            content: 'Baixar CV';
+            background: $dark;
+            position: absolute;
+            width: 99%;
+            height: 94%;
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 700;
+            z-index: 2; 
+        }
+
+        &:hover{
+            scale: 1.1;
+        }
+
+        &:hover::before{
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+    }
+}
+
+    .spliner-viwer{
+        display: flex;
+        width: 600px;
+        height: 600px;
+        background: red;
+
+        spline-viwer{
+            div#container{
+                a#logo{
+                    display: none !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1120px){
+    .slogan-container{
+        flex-direction: column-reverse;
+        gap: 32px;
+        padding: 32px;        
+    }
+    .slogan-content{
+        align-items: center;
+        text-align: center;
+
+        h1{
+            font-size: 32px !important;
+        }
+        h2{
+            font-size: 24px !important;
+        }
+        p.subtext{
+            font-size: 16px !important;
+        }
+    }
+    .spliner-viwer{
+        width: 300px !important;
+        height: 300px  !important;
+    }
+    .cv-button{
+        width: 100%;
+    }
+    
+}

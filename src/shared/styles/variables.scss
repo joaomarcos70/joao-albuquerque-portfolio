@@ -8,3 +8,27 @@ $yellow: rgb(255, 209, 40);
 $secondary-white: #f1f0da;
 $dark-gradient: linear-gradient(128deg, rgba(55,62,70,1) 15%, rgba(55,62,70,1) 54%, rgba(81,90,101,1) 95%);
 $white-gradient: linear-gradient(347deg, rgb(251 242 242) 11%, rgb(204 222 249) 64%, rgb(144 168 197) 100%);
+
+//v3 theme colors
+$light-blue: #041a31;
+$blue: #031324;
+$medium-blue: #020e1b;
+$dark-blue: #020a12;
+$sepia: #010509;
+$highlight: #d8baff;
+
+//v3 cv button theme
+$rainbow-color: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 154, 0, 1) 10%,
+    rgba(208, 222, 33, 1) 20%,
+    rgba(79, 220, 74, 1) 30%,
+    rgba(63, 218, 216, 1) 40%,
+    rgba(47, 201, 226, 1) 50%,
+    rgba(28, 127, 238, 1) 60%,
+    rgba(95, 21, 242, 1) 70%,
+    rgba(186, 12, 248, 1) 80%,
+    rgba(251, 7, 217, 1) 90%,
+    rgba(255, 0, 0, 1) 100%
+);
