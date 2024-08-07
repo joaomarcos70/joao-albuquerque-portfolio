@@ -1,39 +1,84 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./header.scss";
 
 const Header = ({ handleClick }) => {
+	const [width, setWidth] = useState(window.innerWidth);
+	const [scrolled, setScrolled] = useState(false);
+	const [openMenuHamburguer, setOpenMenuHamburguer] = useState(false);
 
-  window.onscroll = () => {
-    const header = document.querySelector('ul');
-    if (window.scrollY > 0) {
-      header.classList.add('header-scrolled');
-    } else {
-      header.classList.remove('header-scrolled');
-    }
-  }
+	const isMobile = width <= 920;
 
-  return (
-      <ul className="header">
-        <div className="logo">
-          JA
-        </div>
+	const menuOpen = () => {
+		const menuHamburguer = document.querySelector(".hamburguer");
+		menuHamburguer.classList.toggle("active");
+		setOpenMenuHamburguer(!openMenuHamburguer);
+	};
 
-        <div className="items">
-          <li id="projetos" onClick={handleClick}>
-            projetos
-          </li>
-          <li id="contato" onClick={handleClick}>
-            contato
-          </li>
-          <li id="sobre" onClick={handleClick}>
-            sobre
-          </li>
-          <li id="content-create" onClick={handleClick}>
-            criador de conteúdo
-          </li>
-        </div>
-      </ul>
-  );
+	useEffect(() => {
+		const handleResize = () => {
+			setWidth(window.innerWidth);
+		};
+
+		const handleScroll = () => {
+			setScrolled(window.scrollY > 0);
+		};
+
+		window.addEventListener("resize", handleResize);
+		window.addEventListener("scroll", handleScroll);
+
+		return () => {
+			window.removeEventListener("resize", handleResize);
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
+
+	return (
+		<>
+			<ul className={`header ${scrolled ? "header-scrolled" : ""}`}>
+				<div className="logo">JA</div>
+				{isMobile ? (
+					<div className="hamburguer" onClick={() => menuOpen()}>
+						<div className="bar1"></div>
+						<div className="bar2"></div>
+						<div className="bar3"></div>
+					</div>
+				) : (
+					<div className="items">
+						<li id="sobre" onClick={handleClick}>
+							sobre
+						</li>
+						<li id="projetos" onClick={handleClick}>
+							projetos
+						</li>
+						<li id="content-create" onClick={handleClick}>
+							criador de conteúdo
+						</li>
+						<li id="contato" onClick={handleClick}>
+							contato
+						</li>
+					</div>
+				)}
+			</ul>
+			{openMenuHamburguer && isMobile ? (
+				<div className="menu-hamburguer-container">
+					<ul className="menu-hamburguer-items">
+						<li id="sobre" onClick={handleClick}>
+							sobre
+						</li>
+						<li id="projetos" onClick={handleClick}>
+							projetos
+						</li>
+						<li id="content-create" onClick={handleClick}>
+							criador de conteúdo
+						</li>
+						<li id="contato" onClick={handleClick}>
+							contato
+						</li>
+					</ul>
+				</div>
+			) : null}
+		</>
+	);
 };
 
 export default Header;

@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     flex: 1 0 calc(100vh - 97px);
-    justify-content: space-around;
+    justify-content: center;
 
 .slogan-content{
     display: flex;
@@ -91,5 +91,44 @@
         display: flex;
         width: 600px;
         height: 600px;
+        background: red;
+
+        spline-viwer{
+            div#container{
+                a#logo{
+                    display: none !important;
+                }
+            }
+        }
     }
+}
+
+@media (max-width: 1120px){
+    .slogan-container{
+        flex-direction: column-reverse;
+        gap: 32px;
+        padding: 32px;        
+    }
+    .slogan-content{
+        align-items: center;
+        text-align: center;
+
+        h1{
+            font-size: 32px !important;
+        }
+        h2{
+            font-size: 24px !important;
+        }
+        p.subtext{
+            font-size: 16px !important;
+        }
+    }
+    .spliner-viwer{
+        width: 300px !important;
+        height: 300px  !important;
+    }
+    .cv-button{
+        width: 100%;
+    }
+    
 }
