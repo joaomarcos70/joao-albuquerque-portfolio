@@ -12,6 +12,12 @@ const Header = ({ handleClick }) => {
 		const menuHamburguer = document.querySelector(".hamburguer");
 		menuHamburguer.classList.toggle("active");
 		setOpenMenuHamburguer(!openMenuHamburguer);
+
+		if (openMenuHamburguer) {
+			document.body.style.overflow = "auto";
+		} else {
+			document.body.style.overflow = "hidden";
+		}
 	};
 
 	useEffect(() => {
