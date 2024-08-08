@@ -1,0 +1,63 @@
+@import '../../shared/styles/variables.scss';
+
+.accordion{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 24px;
+    width: 80%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px 20px 20px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: transparent;
+
+    @media (max-width: 1120px){
+        width: 100%;
+        
+    }
+    .accordion-title{
+        h1{
+            background: transparent;
+            font-weight: 300;
+            font-size: 20px;
+        }
+        background: transparent;
+    }
+    .accordion-content *{
+        &:first-child{
+            padding-top: 32px;
+        }
+        &:last-child{
+            padding-bottom: 32px;
+        }
+        padding: 0 32px;
+        background: transparent;
+        max-height: 500px;
+        font-size: 18px;
+        font-weight: 300;
+        color: $secondary-dark;
+    }
+}
+
+.openned{
+    overflow: auto;
+    .accordion-content{
+        @extend .accordion-content; 
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        animation: openAccordion 0.5s linear forwards;
+        background: transparent;
+        max-height: 500px;
+        overflow: auto;
+    }
+}
+
+@keyframes openAccordion {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}

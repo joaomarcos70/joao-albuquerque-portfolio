@@ -6,11 +6,10 @@ import Projetos from "../projetos/projetos";
 import me from "./assets/me-5.png";
 import GlassComponent from "../glass/glass.component";
 import Header from "../header/header";
+import Accordion from "../../shared/accordion/accordion";
 
 const LandingPageComponent = () => {
-  return (
-    <h1>teste</h1>
-  )
+	return <Accordion />;
 };
 
 export default LandingPageComponent;

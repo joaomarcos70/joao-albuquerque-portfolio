@@ -3,13 +3,16 @@
 
 .title h1{
     display: flex;
-    justify-content: flex-start;
     font-size: 36px;
     font-weight: 700;
-    color: $highlight;
+    background-image: linear-gradient(90deg, #d8baff 1%, #7c00ff 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+    background-clip: text;
 
     @media (max-width: 1120px){
         font-size: 30px;
+        width: 100%;
     }
 }
 .about-container{
@@ -32,17 +35,18 @@
             display: flex;
             flex-direction: column;
             gap: 12px;
-            max-width: 600px;
+            max-width: 700px;
             max-height: 400px;
             overflow: auto;
             
             strong{
                 font-size: 18px;
                 font-weight: 700;
-                color: $highlight;
+                color: $main-white;
             }
-
+            
             p{
+                color: $secondary-dark;
                 font-size: 18px;
                 font-weight: 300;
                 color: $main-white;

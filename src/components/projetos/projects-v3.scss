@@ -1,0 +1,14 @@
+.projects-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 64px;
+    gap: 16px;
+    background: linear-gradient(0deg, #63636347, transparent);
+    border-radius: 20px 20px 20px 20px;
+
+    @media (max-width: 1120px){
+        padding: 32px;
+    }
+}
