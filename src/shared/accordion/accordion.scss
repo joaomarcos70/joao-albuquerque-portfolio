@@ -5,13 +5,13 @@
     flex-direction: column;
     cursor: pointer;
     padding: 24px;
-    width: 80%;
+    width: 100%;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px 20px 20px 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    background: transparent;
-
-    @media (max-width: 1120px){
+    //background: transparent;
+    background:linear-gradient(0deg, rgb(89 88 88 / 18%), black);
+        @media (max-width: 1120px){
         width: 100%;
         
     }

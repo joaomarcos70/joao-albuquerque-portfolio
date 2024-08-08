@@ -15,8 +15,8 @@ const App = () => {
 		<div className="App">
 			<Header />
 			<Slogan />
-			<About />
 			<ProjectsV3 />
+			<About />
 			<LandingPageComponent />
 		</div>
 	);
