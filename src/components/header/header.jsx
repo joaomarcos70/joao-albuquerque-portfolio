@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./header.scss";
 
-const Header = ({ handleClick }) => {
+const Header = () => {
 	const [width, setWidth] = useState(window.innerWidth);
 	const [scrolled, setScrolled] = useState(false);
 	const [openMenuHamburguer, setOpenMenuHamburguer] = useState(false);
@@ -18,6 +18,11 @@ const Header = ({ handleClick }) => {
 		} else {
 			document.body.style.overflow = "hidden";
 		}
+	};
+
+	const openHash = (hash) => {
+		const element = document.getElementById(hash);
+		element.scrollIntoView({ behavior: "smooth" });
 	};
 
 	useEffect(() => {
@@ -50,36 +55,20 @@ const Header = ({ handleClick }) => {
 					</div>
 				) : (
 					<div className="items">
-						<li id="sobre" onClick={handleClick}>
-							sobre
-						</li>
-						<li id="projetos" onClick={handleClick}>
-							projetos
-						</li>
-						<li id="content-create" onClick={handleClick}>
-							criador de conteúdo
-						</li>
-						<li id="contato" onClick={handleClick}>
-							contato
-						</li>
+						<li>sobre</li>
+						<li>projetos</li>
+						<li>criador de conteúdo</li>
+						<li>contato</li>
 					</div>
 				)}
 			</ul>
 			{openMenuHamburguer && isMobile ? (
 				<div className="menu-hamburguer-container">
 					<ul className="menu-hamburguer-items">
-						<li id="sobre" onClick={handleClick}>
-							sobre
-						</li>
-						<li id="projetos" onClick={handleClick}>
-							projetos
-						</li>
-						<li id="content-create" onClick={handleClick}>
-							criador de conteúdo
-						</li>
-						<li id="contato" onClick={handleClick}>
-							contato
-						</li>
+						<li>sobre</li>
+						<li>projetos</li>
+						<li>criador de conteúdo</li>
+						<li>contato</li>
 					</ul>
 				</div>
 			) : null}

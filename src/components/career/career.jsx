@@ -1,8 +1,8 @@
 import React from "react";
-import "./projects-v3.scss";
+import "./career.scss";
 import Accordion from "../../shared/accordion/accordion";
 
-const ProjectsV3 = () => {
+const Career = () => {
 	return (
 		<div className="projects-container">
 			<Accordion
@@ -30,4 +30,4 @@ const ProjectsV3 = () => {
 	);
 };
 
-export default ProjectsV3;
+export default Career;

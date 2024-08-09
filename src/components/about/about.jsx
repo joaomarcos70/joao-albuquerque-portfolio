@@ -17,10 +17,8 @@ const About = () => {
 						<p>
 							Meu interesse por <strong>desenvolvimento</strong> começou com os
 							<strong> jogos online</strong>, onde eu poderia passar o dia inteiro jogando e esse
-							seria o dia perfeito.
-						</p>
-						<p>
-							Mas foi em 2010 que, sem saber na hora, descobri uma das minhas maiores paixões:
+							seria o dia perfeito. Mas foi em 2010 que, mesmo sem saber na hora, descobri uma das
+							minhas maiores paixões:
 							<strong> personalizar coisas.</strong> Tudo que eu tinha eu queria mudar do estado
 							<strong> "default"</strong>.
 						</p>
