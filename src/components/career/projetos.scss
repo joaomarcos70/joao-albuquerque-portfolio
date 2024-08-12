@@ -1,0 +1,150 @@
+@import "../../shared/styles/variables.scss";
+
+.line {
+  width: 24px;
+  height: 2px;
+  background-color: $main-dark;
+  transform: rotate3d(0, 0, 1, 90deg);
+}
+
+.container-carrousel{
+  margin: 8px 0px 0px 0px;
+}
+
+.carrousel{
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: solid 1px rgba(255, 255, 255, 0.26);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: 525px;
+  height: 250px;
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  border-radius: 8px;
+  .text{
+    scrollbar-width: thin;
+    overflow-y: auto;
+    p{
+      font-size: 18px;
+      text-align: left;
+    }
+  }
+  h1{
+    font-size: 28px;
+    padding-bottom: 8px;
+  }
+  img{
+    margin-bottom: 10px;
+    border-radius: 8px;
+    width: 56px;
+    height: 56px;
+    }
+}
+
+.description{
+  margin-top: 10px;
+  font-size: 20px;
+  a{
+    letter-spacing: 1px;
+    font-weight: 600;
+
+    &:hover{
+      color: $yellow;
+    }
+  }
+  cursor: pointer;
+
+}
+
+.carrousel.before{
+  animation: before 0.9s ease-in-out forwards;
+}
+.carrousel.after{
+  animation: after 0.9s ease-in-out forwards;
+}
+
+@keyframes after {
+  from{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes before {
+  from{
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.display {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  label {
+    font-size: 20px;
+  }
+
+  .chevrons{
+    display: flex;
+    align-items: center;
+  }
+
+  .chevron {
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+    width: 24px;
+    height: 24px;
+    color: $main-dark;
+
+    &:hover{
+      color: $secondary-dark;
+    }
+  }
+
+  .icon-container{
+    div{
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+
+@media(max-width: 1305px){
+  .container-carrousel, .carrousel{
+    width: 100%;
+  }
+  .carrousel{
+    p{
+      font-size: 12px !important;
+    }
+    h1{
+      font-size: 24px;
+    }
+  }
+  .description{
+    margin: 4px 0px 0px 0px;
+    a{
+      font-size: 14px;
+    }
+  }
+
+  .display{
+    label{
+      font-size: 14px;
+    }
+  }
+}

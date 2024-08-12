@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./header.scss";
+import { AnchorMenuContext } from "../../context/anchorMenuContext";
 
-const Header = ({ handleClick }) => {
+const Header = () => {
 	const [width, setWidth] = useState(window.innerWidth);
 	const [scrolled, setScrolled] = useState(false);
 	const [openMenuHamburguer, setOpenMenuHamburguer] = useState(false);
+	const { anchorMenu, setAnchorMenu } = useContext(AnchorMenuContext);
 
 	const isMobile = width <= 920;
 
@@ -12,6 +14,19 @@ const Header = ({ handleClick }) => {
 		const menuHamburguer = document.querySelector(".hamburguer");
 		menuHamburguer.classList.toggle("active");
 		setOpenMenuHamburguer(!openMenuHamburguer);
+
+		if (openMenuHamburguer) {
+			document.body.style.overflow = "auto";
+		} else {
+			document.body.style.overflow = "hidden";
+		}
+	};
+
+	const defineMenuAnchor = (hash) => {
+		setAnchorMenu(hash);
+		setOpenMenuHamburguer(false);
+		document.querySelector(".hamburguer").classList.remove("active");
+		document.body.style.overflow = "auto";
 	};
 
 	useEffect(() => {
@@ -44,36 +59,20 @@ const Header = ({ handleClick }) => {
 					</div>
 				) : (
 					<div className="items">
-						<li id="sobre" onClick={handleClick}>
-							sobre
-						</li>
-						<li id="projetos" onClick={handleClick}>
-							projetos
-						</li>
-						<li id="content-create" onClick={handleClick}>
-							criador de conteúdo
-						</li>
-						<li id="contato" onClick={handleClick}>
-							contato
-						</li>
+						<li onClick={() => defineMenuAnchor("sobre")}>sobre</li>
+						<li onClick={() => defineMenuAnchor("projetos")}>projetos</li>
+						<li onClick={() => defineMenuAnchor("sobre")}>criador de conteúdo</li>
+						<li onClick={() => defineMenuAnchor("sobre")}>contato</li>
 					</div>
 				)}
 			</ul>
 			{openMenuHamburguer && isMobile ? (
 				<div className="menu-hamburguer-container">
 					<ul className="menu-hamburguer-items">
-						<li id="sobre" onClick={handleClick}>
-							sobre
-						</li>
-						<li id="projetos" onClick={handleClick}>
-							projetos
-						</li>
-						<li id="content-create" onClick={handleClick}>
-							criador de conteúdo
-						</li>
-						<li id="contato" onClick={handleClick}>
-							contato
-						</li>
+						<li onClick={() => defineMenuAnchor("sobre")}>sobre</li>
+						<li onClick={() => defineMenuAnchor("projetos")}>projetos</li>
+						<li onClick={() => defineMenuAnchor("sobre")}>criador de conteúdo</li>
+						<li onClick={() => defineMenuAnchor("sobre")}>contato</li>
 					</ul>
 				</div>
 			) : null}

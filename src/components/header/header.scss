@@ -1,163 +1,169 @@
-@import '../../shared/styles/variables.scss';
+@import "../../shared/styles/variables.scss";
 
-nav{
-    position: sticky;
-    top: 0;
+nav {
+	position: sticky;
+	top: 0;
 }
-.header{
-    display: flex;
-    justify-content: space-between;
-    max-height: 400px;
-    list-style: none;
-    background-color: rgba(0, 0, 0, 0.1);
-    width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0);
-    position: sticky;
-    top: 0;
-    backdrop-filter: blur(0px);
-    z-index: 1100;
+.header {
+	display: flex;
+	justify-content: space-between;
+	max-height: 400px;
+	list-style: none;
+	background-color: rgba(0, 0, 0, 0.1);
+	width: 100%;
+	border-bottom: 1px solid rgba(255, 255, 255, 0);
+	position: sticky;
+	top: 0;
+	backdrop-filter: blur(0px);
+	z-index: 1100;
 
-    .items{
-        display: flex;
-        background: transparent;
-        flex: 1 1 auto;
-        justify-content: center;
-    }
-    .logo {
-        border-radius: 8px;
-        font-size: 30px;
-        padding: 30px 64px;
-        font-weight: 700;
-        color: $main-white;
-        background-color: transparent;
-        display: block;
-        transition: color 0.5s;
-    
-        &:hover {
-            cursor: pointer;
-            animation: coloredLogo 1s linear forwards;
-        }
-    }
-    
-    @keyframes coloredLogo {
-        0% {
-            color: $main-white;
-        }
-        100% {
-            color: $highlight;
-        }
-    }
-    li {
-        padding: 30px;
-        font-size: 22px;
-        background-color: transparent;
-        color: $main-white;
-        &::after{
-            content: '';
-            display: block;
-            width: 0;
-            height: 1px;
-            background-color: $main-white;
-            transition: width 0.3s;
-        }
-        &:hover{
-            cursor: pointer;
-            &::after {
-                width: 100%;
-            }
-        }
-    }
+	.items {
+		display: flex;
+		background: transparent;
+		flex: 1 1 auto;
+		justify-content: center;
+	}
+	.logo {
+		border-radius: 8px;
+		font-size: 30px;
+		padding: 30px 64px;
+		font-weight: 700;
+		color: $main-white;
+		background-color: transparent;
+		display: block;
+		transition: color 0.5s;
 
-    .hamburguer{
-        padding: 30px;
-        background: transparent;
-        &:hover {
-            cursor: pointer;
-            animation: coloredHamburguer 1s linear forwards;
-        }
-        div.bar1, div.bar2, div.bar3{
-            width: 35px;
-            height: 5px;
-            background-color: $main-white;
-            margin: 6px 0;
-            transition: 0.4s;
-        }
-    }
+		&:hover {
+			cursor: pointer;
+			animation: coloredLogo 1s linear forwards;
+		}
+	}
 
-    .hamburguer.active div.bar1{
-        transform: rotate(-45deg) translate(-7px, 6px);
-    }
-    .hamburguer.active div.bar2{
-        opacity: 0;
-    }
-    .hamburguer.active div.bar3{
-        transform: rotate(45deg) translate(-9px, -8px);
-    }
-}
+	@keyframes coloredLogo {
+		0% {
+			color: $main-white;
+		}
+		100% {
+			color: $highlight;
+		}
+	}
+	li {
+		padding: 30px;
+		font-size: 22px;
+		background-color: transparent;
+		color: $main-white;
+		&::after {
+			content: "";
+			display: block;
+			width: 0;
+			height: 1px;
+			background-color: $main-white;
+			transition: width 0.3s;
+		}
+		&:hover {
+			cursor: pointer;
+			&::after {
+				width: 100%;
+			}
+		}
+	}
 
-.menu-hamburguer-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(250, 250, 250, 0.1);
-    backdrop-filter: blur(10px);
-    z-index: 1001;
+	.hamburguer {
+		padding: 30px;
+		background: transparent;
+		&:hover {
+			cursor: pointer;
+			animation: coloredHamburguer 1s linear forwards;
+		}
+		div.bar1,
+		div.bar2,
+		div.bar3 {
+			width: 35px;
+			height: 5px;
+			background-color: $main-white;
+			margin: 6px 0;
+			transition: 0.4s;
+		}
+	}
 
-    ul,li{
-        background: transparent 
-    }
-    ul.menu-hamburguer-items{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 32px;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        width: 100%;
-        height: 100%;
-    }
-    li{
-        padding: 30px;
-        font-size: 22px;
-        background-color: transparent;
-        color: $main-white;
-        &::after{
-            content: '';
-            display: block;
-            width: 0;
-            height: 1px;
-            background-color: $main-white;
-            transition: width 0.3s;
-        }
-        &:hover{
-            cursor: pointer;
-            &::after {
-                width: 100%;
-            }
-        }
-    }
+	.hamburguer.active div.bar1 {
+		transform: rotate(-45deg) translate(-7px, 6px);
+	}
+	.hamburguer.active div.bar2 {
+		opacity: 0;
+	}
+	.hamburguer.active div.bar3 {
+		transform: rotate(45deg) translate(-9px, -8px);
+	}
 }
 
-.header-scrolled{
-    @extend .header;
-    backdrop-filter: blur(10px);
-    animation: scrollingEffect;
-    transition: linear 0.4s all;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    
-    @keyframes scrollingEffect {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
+.menu-hamburguer-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	//background-color: rgba(250, 250, 250, 0.1);
+	background-color: $dark;
+	backdrop-filter: blur(10px);
+	z-index: 1001;
+
+	ul,
+	li {
+		background: transparent;
+	}
+	ul.menu-hamburguer-items {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 32px;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+	li {
+		width: 100%;
+		text-align: center;
+		padding: 30px;
+		font-size: 22px;
+		background-color: transparent;
+		color: $main-white;
+		&::after {
+			content: "";
+			display: block;
+			width: 0;
+			height: 1px;
+			background-color: $main-white;
+			transition: width 0.3s;
+		}
+		&:hover {
+			cursor: pointer;
+			&::after {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.header-scrolled {
+	@extend .header;
+	backdrop-filter: blur(10px);
+	animation: scrollingEffect;
+	transition: linear 0.4s all;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+	@keyframes scrollingEffect {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
 }

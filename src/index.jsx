@@ -1,24 +1,43 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.scss';
-import reportWebVitals from './reportWebVitals';
-import LandingPageComponent from './components/landing-page/landing-page-component';
-import Header from './components/header/header';
-import Slogan from './components/slogan/slogan';
-import About from './components/about/about';
+import React, { useContext, useEffect } from "react";
+import ReactDOM from "react-dom/client";
+import "./index.scss";
+import reportWebVitals from "./reportWebVitals";
+import LandingPageComponent from "./components/landing-page/landing-page-component";
+import Header from "./components/header/header";
+import Slogan from "./components/slogan/slogan";
+import About from "./components/about/about";
+import Career from "./components/career/career";
+import Projects from "./components/projects/projects";
+import { AnchorMenuContext, AnchorMenuProvider } from "./context/anchorMenuContext";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const App = () => {
-    return (
-        <div className="App">
-            <Header/>
-            <Slogan/>
-            <About/>
-            <LandingPageComponent/>
-        </div>
-    );
-}
+	const { anchorMenu, setAnchorMenu } = useContext(AnchorMenuContext);
 
-root.render(<App/>);
+	useEffect(() => {
+		if (anchorMenu !== "") {
+			const element = document.getElementById(anchorMenu);
+			element.scrollIntoView({ behavior: "smooth" });
+			setAnchorMenu("");
+		}
+	}, [anchorMenu]);
+
+	return (
+		<div className="App">
+			<Header />
+			<Slogan />
+			<About />
+			<Projects />
+			<Career />
+			<LandingPageComponent />
+		</div>
+	);
+};
+
+root.render(
+	<AnchorMenuProvider>
+		<App />
+	</AnchorMenuProvider>
+);
 reportWebVitals();
