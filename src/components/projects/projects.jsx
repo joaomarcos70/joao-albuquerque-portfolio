@@ -1,34 +1,36 @@
 import React from "react";
 import "./projects.scss";
-
-const projects = [
-	{
-		title: "Picpay - recuperação de crédito",
-		description:
-			"A recuperação de crédito é um dos pilares fundamentais para a saúde financeira de uma empresa, e no Picpay não é diferente. Com o crescimento exponencial da base de usuários, a recuperação de crédito se tornou um desafio cada vez maior, e a necessidade de desenvolver novas soluções para garantir a sustentabilidade do negócio se tornou evidente.",
-	},
-	{
-		title: "Picpay - recuperação de crédito",
-		description:
-			"A recuperação de crédito é um dos pilares fundamentais para a saúde financeira de uma empresa, e no Picpay não é diferente. Com o crescimento exponencial da base de usuários, a recuperação de crédito se tornou um desafio cada vez maior, e a necessidade de desenvolver novas soluções para garantir a sustentabilidade do negócio se tornou evidente.",
-	},
-	{
-		title: "Picpay - recuperação de crédito",
-		description:
-			"A recuperação de crédito é um dos pilares fundamentais para a saúde financeira de uma empresa, e no Picpay não é diferente. Com o crescimento exponencial da base de usuários, a recuperação de crédito se tornou um desafio cada vez maior, e a necessidade de desenvolver novas soluções para garantir a sustentabilidade do negócio se tornou evidente.",
-	},
-];
+import { projects } from "./projects.mock.ts";
 
 const Projects = () => {
+	const openLink = (url) => {
+		window.open(url, "_blank");
+	};
+
 	return (
-		<>
-			{projects.map((project, index) => (
-				<div key={index} className="project-item">
-					<h1>{"project.title"}</h1>
-					<p>{"project.description"}</p>
-				</div>
-			))}
-		</>
+		<div className="projects-container">
+			<div className="title">
+				<h1>Projetos</h1>
+			</div>
+			<div className="projects">
+				{projects.map((project, index) => (
+					<div key={index} className="project-item" onClick={() => openLink(project.Link)}>
+						<div className="icon">
+							<span>saiba mais</span>
+						</div>
+						<div className="light"></div>
+						<div className="project-image">
+							<img src={project.picture} alt="project" />
+						</div>
+						<div className="project-info">
+							<h1>{project.title}</h1>
+							<p>{project.description}</p>
+						</div>
+						<div className="shadow"></div>
+					</div>
+				))}
+			</div>
+		</div>
 	);
 };
 

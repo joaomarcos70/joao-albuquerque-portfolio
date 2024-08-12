@@ -7,6 +7,7 @@ import Header from "./components/header/header";
 import Slogan from "./components/slogan/slogan";
 import About from "./components/about/about";
 import Career from "./components/career/career";
+import Projects from "./components/projects/projects";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -16,6 +17,7 @@ const App = () => {
 			<Header />
 			<Slogan />
 			<About />
+			<Projects />
 			<Career />
 			<LandingPageComponent />
 		</div>
