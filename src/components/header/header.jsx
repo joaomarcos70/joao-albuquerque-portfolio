@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./header.scss";
+import { AnchorMenuContext } from "../../context/anchorMenuContext";
 
 const Header = () => {
 	const [width, setWidth] = useState(window.innerWidth);
 	const [scrolled, setScrolled] = useState(false);
 	const [openMenuHamburguer, setOpenMenuHamburguer] = useState(false);
+	const { anchorMenu, setAnchorMenu } = useContext(AnchorMenuContext);
 
 	const isMobile = width <= 920;
 
@@ -20,9 +22,11 @@ const Header = () => {
 		}
 	};
 
-	const openHash = (hash) => {
-		const element = document.getElementById(hash);
-		element.scrollIntoView({ behavior: "smooth" });
+	const defineMenuAnchor = (hash) => {
+		setAnchorMenu(hash);
+		setOpenMenuHamburguer(false);
+		document.querySelector(".hamburguer").classList.remove("active");
+		document.body.style.overflow = "auto";
 	};
 
 	useEffect(() => {
@@ -55,20 +59,20 @@ const Header = () => {
 					</div>
 				) : (
 					<div className="items">
-						<li>sobre</li>
-						<li>projetos</li>
-						<li>criador de conteúdo</li>
-						<li>contato</li>
+						<li onClick={() => defineMenuAnchor("sobre")}>sobre</li>
+						<li onClick={() => defineMenuAnchor("projetos")}>projetos</li>
+						<li onClick={() => defineMenuAnchor("sobre")}>criador de conteúdo</li>
+						<li onClick={() => defineMenuAnchor("sobre")}>contato</li>
 					</div>
 				)}
 			</ul>
 			{openMenuHamburguer && isMobile ? (
 				<div className="menu-hamburguer-container">
 					<ul className="menu-hamburguer-items">
-						<li>sobre</li>
-						<li>projetos</li>
-						<li>criador de conteúdo</li>
-						<li>contato</li>
+						<li onClick={() => defineMenuAnchor("sobre")}>sobre</li>
+						<li onClick={() => defineMenuAnchor("projetos")}>projetos</li>
+						<li onClick={() => defineMenuAnchor("sobre")}>criador de conteúdo</li>
+						<li onClick={() => defineMenuAnchor("sobre")}>contato</li>
 					</ul>
 				</div>
 			) : null}

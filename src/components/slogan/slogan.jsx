@@ -8,7 +8,7 @@ const openLink = () => {
 const Slogan = () => {
 	return (
 		<>
-			<div className="slogan-container">
+			<div className="slogan-container" id="slogan">
 				<div className="slogan-content">
 					<h1>João Albuquerque</h1>
 					<h2>desenvolvedor de software</h2>

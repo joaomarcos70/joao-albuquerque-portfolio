@@ -8,9 +8,9 @@ const Projects = () => {
 	};
 
 	return (
-		<div className="projects-container">
+		<div className="projects-container" id="projetos">
 			<div className="title">
-				<h1>Projetos</h1>
+				<h1>Principais projetos.</h1>
 			</div>
 			<div className="projects">
 				{projects.map((project, index) => (
