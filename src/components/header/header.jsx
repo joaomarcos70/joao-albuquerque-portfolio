@@ -25,8 +25,10 @@ const Header = () => {
 	const defineMenuAnchor = (hash) => {
 		setAnchorMenu(hash);
 		setOpenMenuHamburguer(false);
-		document.querySelector(".hamburguer").classList.remove("active");
 		document.body.style.overflow = "auto";
+		if (isMobile && document.querySelector(".hamburguer").classList.contains("active")) {
+			document.querySelector(".hamburguer").classList.remove("active");
+		}
 	};
 
 	useEffect(() => {

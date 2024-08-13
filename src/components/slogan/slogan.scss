@@ -1,134 +1,140 @@
-@import '../../shared/styles/variables.scss';
+@import "../../shared/styles/variables.scss";
 
-.slogan-container{
-    padding: 64px;
-    display: flex;
-    align-items: center;
-    flex: 1 0 calc(100vh - 97px);
-    justify-content: center;
+.slogan-container {
+	padding: 64px;
+	display: flex;
+	align-items: center;
+	flex: 1 0 calc(100vh - 97px);
+	justify-content: center;
 
-.slogan-content{
-    display: flex;
-    flex-direction: column;
-    max-width: 700px;
-    gap: 16px;
-    h1{
-        font-size: 64px;
-        font-weight: 700;
-    }
-    h2{
-        font-size: 48px;
-        font-weight: 600;
-    }
+	.slogan-content {
+		display: flex;
+		flex-direction: column;
+		max-width: 700px;
+		gap: 16px;
+		h1 {
+			font-size: 64px;
+			font-weight: 700;
+		}
+		h2 {
+			font-size: 64px;
+			font-weight: 700;
+		}
 
-    p.subtext{
-        max-width: 700px;
-        font-size: 24px;
-        font-weight: 300;
-    }
+		p.subtext {
+			max-width: 700px;
+			font-size: 24px;
+			font-weight: 300;
+		}
 
-    .highlight{
-        cursor: pointer;
-        color: $highlight;
-    }
+		.highlight {
+			cursor: pointer;
+			color: $highlight;
+		}
 
-    .cv-button{
-        margin-top: 16px;
-        height: 42px;
-        width: 50%;
-        border-radius: 16px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        position: relative;
-        transition: scale 0.5s;
-        overflow: hidden;
-        
-        &::before{
-            content: '';
-            background: $rainbow-color;
-            position: absolute;
-            width: 100%;
-            height: 1800%;
-            border-radius: 16px;
-            z-index: 1;        
-        }
-        
-        &::after{
-            content: 'Baixar CV';
-            background: $dark;
-            position: absolute;
-            width: 99%;
-            height: 94%;
-            border-radius: 16px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 16px;
-            font-weight: 700;
-            z-index: 2; 
-        }
+		.cv-button {
+			margin-top: 16px;
+			height: 42px;
+			width: 50%;
+			border-radius: 16px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			position: relative;
+			transition: scale 0.5s;
+			overflow: hidden;
 
-        &:hover{
-            scale: 1.1;
-        }
+			&::before {
+				content: "";
+				background: $rainbow-color;
+				position: absolute;
+				width: 100%;
+				height: 1800%;
+				border-radius: 16px;
+				z-index: 1;
+			}
 
-        &:hover::before{
-            animation: spin 3s linear infinite;
-        }
+			&::after {
+				content: "Baixar CV";
+				background: $dark;
+				position: absolute;
+				width: 99%;
+				height: 94%;
+				border-radius: 16px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 16px;
+				font-weight: 700;
+				z-index: 2;
+			}
 
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
+			&:hover {
+				scale: 1.1;
+			}
 
-    }
+			&:hover::before {
+				animation: spin 3s linear infinite;
+			}
+
+			@keyframes spin {
+				to {
+					transform: rotate(360deg);
+				}
+			}
+		}
+	}
+
+	.spliner-viwer {
+		display: flex;
+		width: 600px;
+		height: 600px;
+		background: red;
+
+		spline-viwer {
+			div#container {
+				a#logo {
+					background-color: blue !important;
+					display: none !important;
+				}
+			}
+		}
+
+		.light {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: green;
+			box-shadow: 0 0 16px 8px rgba(255, 255, 255, 0.5);
+		}
+	}
 }
 
-    .spliner-viwer{
-        display: flex;
-        width: 600px;
-        height: 600px;
-        background: red;
+@media (max-width: 1120px) {
+	.slogan-container {
+		flex-direction: column-reverse;
+		gap: 32px;
+		padding: 32px;
+	}
+	.slogan-content {
+		align-items: center;
 
-        spline-viwer{
-            div#container{
-                a#logo{
-                    background-color: blue !important;
-                    display: none !important;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 1120px){
-    .slogan-container{
-        flex-direction: column-reverse;
-        gap: 32px;
-        padding: 32px;        
-    }
-    .slogan-content{
-        align-items: center;
-
-        h1{
-            font-size: 32px !important;
-        }
-        h2{
-            font-size: 24px !important;
-        }
-        p.subtext{
-            font-size: 20px !important;
-        }
-    }
-    .spliner-viwer{
-        width: 300px !important;
-        height: 300px  !important;
-    }
-    .cv-button{
-        width: 100% !important;
-    }
-    
+		h1 {
+			font-size: 32px !important;
+		}
+		h2 {
+			font-size: 32px !important;
+		}
+		p.subtext {
+			font-size: 20px !important;
+		}
+	}
+	.spliner-viwer {
+		width: 300px !important;
+		height: 300px !important;
+	}
+	.cv-button {
+		width: 100% !important;
+	}
 }
