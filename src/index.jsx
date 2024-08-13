@@ -29,8 +29,6 @@ const App = () => {
 			<Slogan />
 			<About />
 			<Projects />
-			<Career />
-			<LandingPageComponent />
 		</div>
 	);
 };

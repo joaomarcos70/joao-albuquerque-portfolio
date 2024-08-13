@@ -10,10 +10,11 @@ const Slogan = () => {
 		<>
 			<div className="slogan-container" id="slogan">
 				<div className="slogan-content">
+					<div className="light"></div>
 					<h1>João Albuquerque</h1>
 					<h2>desenvolvedor de software</h2>
 					<p className="subtext">
-						Eu sou um desenvolvedor front-end especializado na construção de experiências digitais.
+						Sou um desenvolvedor front-end especializado na construção de experiências digitais.
 						Atualmente, eu estou trabalhando no{" "}
 						<span onClick={() => openLink()} className="highlight">
 							Picpay
