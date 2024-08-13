@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import PicpayProject from "./pic-projects/lp-picpay-3.png";
+import PicpayProject from "./pic-projects/lp-picpay-4.png";
 
 //textos de descrição não deverão passar de 125 caracteres
 

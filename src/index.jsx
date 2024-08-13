@@ -9,6 +9,8 @@ import About from "./components/about/about";
 import Career from "./components/career/career";
 import Projects from "./components/projects/projects";
 import { AnchorMenuContext, AnchorMenuProvider } from "./context/anchorMenuContext";
+import Contact from "./components/contatos/contact";
+import Footer from "./components/footer/footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -29,6 +31,7 @@ const App = () => {
 			<Slogan />
 			<About />
 			<Projects />
+			<Footer />
 		</div>
 	);
 };
