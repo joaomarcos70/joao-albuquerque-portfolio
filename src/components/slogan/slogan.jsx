@@ -1,8 +1,6 @@
 import React from "react";
 import "./slogan.scss";
-import houseScene from "../../shared/images/scenes/houseScene.glb";
 import lightRayImage from "../../shared/images/assets/light-ray.png";
-import GLTFViewer from "../../shared/render3d/render3d";
 
 const openLink = () => {
 	window.open("https://picpay.com/");
