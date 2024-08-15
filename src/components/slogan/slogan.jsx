@@ -1,5 +1,8 @@
 import React from "react";
 import "./slogan.scss";
+import houseScene from "../../shared/images/scenes/houseScene.glb";
+import lightRayImage from "../../shared/images/assets/light-ray.png";
+import GLTFViewer from "../../shared/render3d/render3d";
 
 const openLink = () => {
 	window.open("https://picpay.com/");
@@ -9,8 +12,10 @@ const Slogan = () => {
 	return (
 		<>
 			<div className="slogan-container" id="slogan">
+				<div className="light-ray">
+					<img src={lightRayImage} />
+				</div>
 				<div className="slogan-content">
-					<div className="light"></div>
 					<h1>João Albuquerque</h1>
 					<h2>desenvolvedor de software</h2>
 					<p className="subtext">

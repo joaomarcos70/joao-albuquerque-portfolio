@@ -9,11 +9,12 @@
 		padding: 32px;
 	}
 	.projects {
-		display: flex;
-		justify-content: center;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 		gap: 32px;
-		flex-wrap: wrap;
+		justify-items: center;
 		.project-item {
+			width: 80%;
 			border-radius: 16px;
 			padding: 24px;
 			box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -23,7 +24,7 @@
 			border-right: 1px solid rgba(255, 255, 255, 0.1);
 			border-top: 1px solid rgba(255, 255, 255, 0.1);
 			border-bottom: 1px solid rgba(255, 255, 255, 0);
-			width: 400px;
+			//width: 400px;
 			height: 400px;
 			display: flex;
 			flex-direction: column-reverse;
