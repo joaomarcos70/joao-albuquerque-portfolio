@@ -26,7 +26,14 @@ const Slogan = () => {
 					<div className="cv-button"></div>
 				</div>
 				<div className="spliner-viwer">
-					<spline-viewer url="https://prod.spline.design/YRfReBj71YbaxhBf/scene.splinecode"></spline-viewer>
+					<script
+						type="module"
+						src="https://unpkg.com/@splinetool/viewer@1.9.13/build/spline-viewer.js"
+					></script>
+					<spline-viewer
+						loading-anim-type="spinner-small-dark"
+						url="https://prod.spline.design/AxO-VUEf4QMJX0iF/scene.splinecode"
+					></spline-viewer>
 				</div>
 			</div>
 		</>
