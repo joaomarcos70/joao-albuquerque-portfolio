@@ -1,32 +1,41 @@
-@import '../../shared/styles/variables.scss';
+@import "../../shared/styles/variables.scss";
 
-.contact-area{
-    .email{
-        font-size: 14px;
-        word-break: break-all;
-    }
-    
-    .social{
-        display: flex;
-        gap: 8px;
-        align-items: center;
-        justify-content: center;
-    }
-    .social p:nth-child(n){
-        color:$main-white;
-        font-size: 14px;
-    }
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 8px;
-    padding: 8px;
+.contact-area {
+	background: rgba(70, 66, 66, 0.048);
+	backdrop-filter: blur(10px);
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 16px;
+	padding: 32px 0;
+	.email {
+		font-size: 16px;
+		word-break: break-all;
+	}
+
+	.social {
+		display: flex;
+		gap: 8px;
+		align-items: center;
+		justify-content: center;
+
+		.linkedin,
+		.github,
+		.insta {
+			cursor: pointer;
+		}
+	}
+	.social p:nth-child(n) {
+		color: $main-white;
+		font-size: 16px;
+	}
 }
 
-.iconSocial{
-    height: 26px;
-    width: 26px;
-    margin-right:24px;
-    cursor:pointer;
+.iconSocial {
+	height: 26px;
+	width: 26px;
+	margin-right: 24px;
+	cursor: pointer;
 }

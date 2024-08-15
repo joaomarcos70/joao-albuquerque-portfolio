@@ -63,8 +63,7 @@ const Header = () => {
 					<div className="items">
 						<li onClick={() => defineMenuAnchor("sobre")}>sobre</li>
 						<li onClick={() => defineMenuAnchor("projetos")}>projetos</li>
-						<li onClick={() => defineMenuAnchor("sobre")}>criador de conteúdo</li>
-						<li onClick={() => defineMenuAnchor("sobre")}>contato</li>
+						<li onClick={() => defineMenuAnchor("contato")}>contato</li>
 					</div>
 				)}
 			</ul>
@@ -73,8 +72,7 @@ const Header = () => {
 					<ul className="menu-hamburguer-items">
 						<li onClick={() => defineMenuAnchor("sobre")}>sobre</li>
 						<li onClick={() => defineMenuAnchor("projetos")}>projetos</li>
-						<li onClick={() => defineMenuAnchor("sobre")}>criador de conteúdo</li>
-						<li onClick={() => defineMenuAnchor("sobre")}>contato</li>
+						<li onClick={() => defineMenuAnchor("contato")}>contato</li>
 					</ul>
 				</div>
 			) : null}
