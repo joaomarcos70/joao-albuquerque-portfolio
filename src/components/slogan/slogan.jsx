@@ -32,7 +32,7 @@ const Slogan = () => {
 					></script>
 					<spline-viewer
 						loading-anim-type="spinner-small-dark"
-						url="https://prod.spline.design/AxO-VUEf4QMJX0iF/scene.splinecode"
+						url="https://prod.spline.design/huJApuazq-Uci2Hk/scene.splinecode"
 					></spline-viewer>
 				</div>
 			</div>
