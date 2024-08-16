@@ -3,7 +3,7 @@
 
 ---
 
-Bem-vindo ao meu portfólio! Este é um projeto simples que apresenta minhas habilidades, projetos e informações pessoais. Sinta-se à vontade para explorar e conhecer um pouco mais sobre mim.
+Bem-vindo ao meu portfólio! Este é um projeto que apresenta minhas habilidades, projetos e informações pessoais. Sinta-se à vontade para explorar e conhecer um pouco mais sobre mim.
 
 ## Visão Geral
 
