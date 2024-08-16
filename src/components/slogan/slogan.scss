@@ -100,7 +100,7 @@
 		display: flex;
 		width: 600px;
 		height: 600px;
-		background: red;
+		z-index: 1;
 	}
 }
 
@@ -109,7 +109,7 @@
 	top: -1px;
 	width: 100%;
 	height: 62%;
-	right: -65px;
+	z-index: 0;
 	img {
 		width: 100%;
 		height: 100%;
@@ -121,7 +121,7 @@
 	.slogan-container {
 		flex-direction: column-reverse;
 		gap: 32px;
-		padding: 32px;
+		padding: 16px;
 	}
 	.slogan-content {
 		align-items: center;
@@ -142,5 +142,11 @@
 	}
 	.cv-button {
 		width: 100% !important;
+	}
+}
+
+@media (max-width: 450px) {
+	.light-ray {
+		display: none !important;
 	}
 }

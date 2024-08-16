@@ -1,8 +1,6 @@
 import React from "react";
 import "./slogan.scss";
-import houseScene from "../../shared/images/scenes/houseScene.glb";
 import lightRayImage from "../../shared/images/assets/light-ray.png";
-import GLTFViewer from "../../shared/render3d/render3d";
 
 const openLink = () => {
 	window.open("https://picpay.com/");
@@ -12,9 +10,6 @@ const Slogan = () => {
 	return (
 		<>
 			<div className="slogan-container" id="slogan">
-				<div className="light-ray">
-					<img src={lightRayImage} />
-				</div>
 				<div className="slogan-content">
 					<h1>João Albuquerque</h1>
 					<h2>desenvolvedor de software</h2>
@@ -25,10 +20,28 @@ const Slogan = () => {
 							Picpay
 						</span>
 					</p>
-					<div className="cv-button"></div>
+					<div
+						className="cv-button"
+						onClick={() =>
+							window.open(
+								"https://drive.google.com/file/d/15HM-D1YhhcMDyuX-h4SeKF0FJdQIQjVj/view?usp=sharing",
+								"_blank"
+							)
+						}
+					></div>
 				</div>
 				<div className="spliner-viwer">
-					<spline-viewer url="https://prod.spline.design/YRfReBj71YbaxhBf/scene.splinecode"></spline-viewer>
+					<script
+						type="module"
+						src="https://unpkg.com/@splinetool/viewer@1.9.13/build/spline-viewer.js"
+					></script>
+					<spline-viewer
+						loading-anim-type="spinner-small-dark"
+						url="https://prod.spline.design/huJApuazq-Uci2Hk/scene.splinecode"
+					></spline-viewer>
+				</div>
+				<div className="light-ray">
+					<img src={lightRayImage} />
 				</div>
 			</div>
 		</>

@@ -17,7 +17,7 @@
 
 	.social {
 		display: flex;
-		gap: 8px;
+		gap: 16px;
 		align-items: center;
 		justify-content: center;
 
@@ -30,6 +30,7 @@
 	.social p:nth-child(n) {
 		color: $main-white;
 		font-size: 16px;
+		text-align: center;
 	}
 }
 
