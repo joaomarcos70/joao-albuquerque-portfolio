@@ -1,8 +1,5 @@
 # Portfólio João Albuquerque 👨‍💻
-
-#### Projeto Atualmente em Desenvolvimento
-
-##### Versão de Build:
+##### Versão de Build: 3.0.0
 
 ---
 
