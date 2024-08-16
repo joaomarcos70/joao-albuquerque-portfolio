@@ -6,15 +6,15 @@
 	min-height: 100vh;
 
 	@media (max-width: 768px) {
-		padding: 32px;
+		padding: 16px;
 	}
 	.projects {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+		display: flex;
+		flex-wrap: wrap;
 		gap: 32px;
-		justify-items: center;
+		justify-content: center;
 		.project-item {
-			width: 80%;
+			width: 400px;
 			border-radius: 16px;
 			padding: 24px;
 			box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -24,7 +24,6 @@
 			border-right: 1px solid rgba(255, 255, 255, 0.1);
 			border-top: 1px solid rgba(255, 255, 255, 0.1);
 			border-bottom: 1px solid rgba(255, 255, 255, 0);
-			//width: 400px;
 			height: 400px;
 			display: flex;
 			flex-direction: column-reverse;
@@ -79,6 +78,8 @@
 				flex-direction: column;
 				gap: 16px;
 				background: transparent;
+				height: 35%;
+				padding: 12px 0;
 				h1 {
 					font-size: 20px;
 					font-weight: 600;
@@ -114,7 +115,7 @@
 				bottom: 0;
 				left: 0;
 				width: 100%;
-				height: 32%;
+				height: 35%;
 				box-shadow: 0 -2px 12px 18px rgb(1, 1, 1);
 				opacity: 1;
 				z-index: 1;
@@ -146,7 +147,11 @@
 
 			@media (max-width: 425px) {
 				width: 300px;
-				height: 300px;
+				height: 450px;
+
+				.light {
+					left: 145px !important;
+				}
 			}
 		}
 	}

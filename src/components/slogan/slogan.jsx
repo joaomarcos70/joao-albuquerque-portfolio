@@ -10,9 +10,6 @@ const Slogan = () => {
 	return (
 		<>
 			<div className="slogan-container" id="slogan">
-				<div className="light-ray">
-					<img src={lightRayImage} />
-				</div>
 				<div className="slogan-content">
 					<h1>João Albuquerque</h1>
 					<h2>desenvolvedor de software</h2>
@@ -23,7 +20,15 @@ const Slogan = () => {
 							Picpay
 						</span>
 					</p>
-					<div className="cv-button"></div>
+					<div
+						className="cv-button"
+						onClick={() =>
+							window.open(
+								"https://drive.google.com/file/d/15HM-D1YhhcMDyuX-h4SeKF0FJdQIQjVj/view?usp=sharing",
+								"_blank"
+							)
+						}
+					></div>
 				</div>
 				<div className="spliner-viwer">
 					<script
@@ -34,6 +39,9 @@ const Slogan = () => {
 						loading-anim-type="spinner-small-dark"
 						url="https://prod.spline.design/huJApuazq-Uci2Hk/scene.splinecode"
 					></spline-viewer>
+				</div>
+				<div className="light-ray">
+					<img src={lightRayImage} />
 				</div>
 			</div>
 		</>
