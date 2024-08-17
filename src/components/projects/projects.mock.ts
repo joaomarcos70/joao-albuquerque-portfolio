@@ -15,5 +15,6 @@ export const projects = [
 		title: `Gerenciamento de arquivos Superfood`,
 		description: `Sistema de gerenciamento de arquivos integrado ao Google Drive.`,
 		picture: superfoodProject,
+		Link: "/projeto-superfood",
 	},
 ];
