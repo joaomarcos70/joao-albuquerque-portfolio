@@ -1,0 +1,33 @@
+@import "../../shared/styles/variables.scss";
+
+.main-container {
+	display: flex;
+	justify-content: center;
+	padding: 32px;
+
+	.content {
+		max-width: 800px;
+		line-height: 30px;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
+		h1 {
+			font-weight: 700;
+		}
+
+		h2 {
+			font-weight: 500;
+		}
+
+		p {
+			color: $secondary-dark;
+		}
+
+		ul > li {
+			color: $secondary-dark;
+			list-style-type: disc;
+			margin-left: 20px;
+		}
+	}
+}

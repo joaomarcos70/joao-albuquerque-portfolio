@@ -1,10 +1,17 @@
 import React from "react";
 import "./projects.scss";
 import { projects } from "./projects.mock.ts";
+import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
+	const navigate = useNavigate();
+
 	const openLink = (url) => {
-		window.open(url, "_blank");
+		if (url.includes("http")) {
+			window.open(url, "_blank");
+			return;
+		}
+		navigate(url);
 	};
 
 	return (
