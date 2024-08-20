@@ -1,54 +1,75 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
+import {
+	createBrowserRouter,
+	RouterProvider,
+	useLocation,
+	Outlet,
+	Navigate,
+	useNavigate,
+} from "react-router-dom";
+import Home from "./components/home/home";
+import SuperfoodProject from "./components/superfood-project/superfood-project";
+import { AnchorMenuProvider } from "./context/anchorMenuContext";
 import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
 import Header from "./components/header/header";
-import Slogan from "./components/slogan/slogan";
-import About from "./components/about/about";
-import Projects from "./components/projects/projects";
-import { AnchorMenuContext, AnchorMenuProvider } from "./context/anchorMenuContext";
 import Footer from "./components/footer/footer";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import SuperfoodProject from "./components/superfood-project/superfood-project";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-const App = () => {
-	const { anchorMenu, setAnchorMenu } = useContext(AnchorMenuContext);
+const ScrollToTop = () => {
+	const { pathname } = useLocation();
 
 	useEffect(() => {
-		if (anchorMenu !== "") {
-			const element = document.getElementById(anchorMenu);
-			element.scrollIntoView({ behavior: "smooth" });
-			setAnchorMenu("");
-		}
-	}, [anchorMenu]);
+		window.scrollTo(0, 0);
+		localStorage.setItem("currentPath", pathname);
+	}, [pathname]);
 
-	return (
-		<div className="App">
-			<Header />
-			<Slogan />
-			<About />
-			<Projects />
-			<Footer />
-		</div>
-	);
+	return null;
 };
+
+const Layout = () => (
+	<>
+		<ScrollToTop />
+		<Header />
+		<Outlet />
+		<Footer />
+	</>
+);
 
 const router = createBrowserRouter([
 	{
 		path: "/",
-		element: (
-			<AnchorMenuProvider>
-				<App />
-			</AnchorMenuProvider>
-		),
-	},
-	{
-		path: "/projeto-superfood",
-		element: <SuperfoodProject />,
+		element: <Layout />,
+		children: [
+			{
+				index: true,
+				element: <Navigate to="/home" replace />,
+			},
+			{
+				path: "/home",
+				element: <Home />,
+			},
+			{
+				path: "/projeto-superfood",
+				element: <SuperfoodProject />,
+			},
+			{
+				path: "*",
+				element: <Home />,
+			},
+		],
 	},
 ]);
 
-root.render(<RouterProvider router={router}></RouterProvider>);
+const App = () => {
+	return (
+		<AnchorMenuProvider>
+			<RouterProvider router={router} />
+		</AnchorMenuProvider>
+	);
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+
 reportWebVitals();

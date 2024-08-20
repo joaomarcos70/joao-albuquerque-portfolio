@@ -1,12 +1,16 @@
 import React, { useState, useEffect, useContext } from "react";
 import "./header.scss";
 import { AnchorMenuContext } from "../../context/anchorMenuContext";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
 	const [width, setWidth] = useState(window.innerWidth);
 	const [scrolled, setScrolled] = useState(false);
 	const [openMenuHamburguer, setOpenMenuHamburguer] = useState(false);
-	const { anchorMenu, setAnchorMenu } = useContext(AnchorMenuContext);
+	const { setAnchorMenu } = useContext(AnchorMenuContext);
+	const navigate = useNavigate();
+	const { pathname } = useLocation();
+	const isHomePage = pathname === "/home";
 
 	const isMobile = width <= 920;
 
@@ -52,8 +56,10 @@ const Header = () => {
 	return (
 		<>
 			<ul className={`header ${scrolled ? "header-scrolled" : ""}`}>
-				<div className="logo">JA</div>
-				{isMobile ? (
+				<div className="logo" onClick={() => navigate("/home")}>
+					JA
+				</div>
+				{isHomePage && isMobile ? (
 					<div className="hamburguer" onClick={() => menuOpen()}>
 						<div className="bar1"></div>
 						<div className="bar2"></div>
@@ -61,18 +67,26 @@ const Header = () => {
 					</div>
 				) : (
 					<div className="items">
-						<li onClick={() => defineMenuAnchor("sobre")}>sobre</li>
-						<li onClick={() => defineMenuAnchor("projetos")}>projetos</li>
-						<li onClick={() => defineMenuAnchor("contato")}>contato</li>
+						{isHomePage && (
+							<>
+								<li onClick={() => defineMenuAnchor("sobre")}>sobre</li>
+								<li onClick={() => defineMenuAnchor("projetos")}>projetos</li>
+								<li onClick={() => defineMenuAnchor("contato")}>contato</li>
+							</>
+						)}
 					</div>
 				)}
 			</ul>
 			{openMenuHamburguer && isMobile ? (
 				<div className="menu-hamburguer-container">
 					<ul className="menu-hamburguer-items">
-						<li onClick={() => defineMenuAnchor("sobre")}>sobre</li>
-						<li onClick={() => defineMenuAnchor("projetos")}>projetos</li>
-						<li onClick={() => defineMenuAnchor("contato")}>contato</li>
+						{isHomePage && (
+							<>
+								<li onClick={() => defineMenuAnchor("sobre")}>sobre</li>
+								<li onClick={() => defineMenuAnchor("projetos")}>projetos</li>
+								<li onClick={() => defineMenuAnchor("contato")}>contato</li>
+							</>
+						)}
 					</ul>
 				</div>
 			) : null}
