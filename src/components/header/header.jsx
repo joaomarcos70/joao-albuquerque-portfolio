@@ -55,18 +55,18 @@ const Header = () => {
 
 	return (
 		<>
-			<ul className={`header ${scrolled ? "header-scrolled" : ""}`}>
+			<div className={`header ${scrolled ? "header-scrolled" : ""}`}>
 				<div className="logo" onClick={() => navigate("/home")}>
 					JA
 				</div>
 				{isHomePage && isMobile ? (
-					<div className="hamburguer" onClick={() => menuOpen()}>
+					<div className="hamburguer" onClick={() => menuOpen()} alt="menu hamburguer" aria-label="menu hamburguer">
 						<div className="bar1"></div>
 						<div className="bar2"></div>
 						<div className="bar3"></div>
 					</div>
 				) : (
-					<div className="items">
+					<ul className="items">
 						{isHomePage && (
 							<>
 								<li onClick={() => defineMenuAnchor("sobre")}>sobre</li>
@@ -74,9 +74,9 @@ const Header = () => {
 								<li onClick={() => defineMenuAnchor("contato")}>contato</li>
 							</>
 						)}
-					</div>
+					</ul>
 				)}
-			</ul>
+			</div>
 			{openMenuHamburguer && isMobile ? (
 				<div className="menu-hamburguer-container">
 					<ul className="menu-hamburguer-items">
