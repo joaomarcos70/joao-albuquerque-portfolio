@@ -1,6 +1,5 @@
 import React from "react";
 import "./about.scss";
-import Me from "../../shared/images/assets/me.jpg";
 
 const About = () => {
 	return (
@@ -11,7 +10,7 @@ const About = () => {
 				</div>
 				<div className="about-content">
 					<span className="picture">
-						<img src={Me} alt="foto do autor" />
+						<img loading="lazy" src="/me-2.jpg" alt="foto do autor" />
 					</span>
 					<article className="describe">
 						<p>

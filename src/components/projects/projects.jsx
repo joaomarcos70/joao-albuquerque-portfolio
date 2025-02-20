@@ -27,7 +27,7 @@ const Projects = () => {
 						</div>
 						<div className="light"></div>
 						<div className="project-image">
-							<img src={project.picture} alt="project" />
+							<img loading="lazy" src={project.picture} alt="imagem do projeto" />
 						</div>
 						<div className="project-info">
 							<h1>{project.title}</h1>

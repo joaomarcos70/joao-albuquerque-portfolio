@@ -6,7 +6,6 @@ import {
 	useLocation,
 	Outlet,
 	Navigate,
-	useNavigate,
 } from "react-router-dom";
 import Home from "./components/home/home";
 import SuperfoodProject from "./components/superfood-project/superfood-project";
