@@ -13,6 +13,10 @@
 	.swiper-slide {
 		width: 400px;
 
+		@media (max-width: 425px) {
+			width: 300px;
+		}
+
 		.project-item {
 			width: 400px;
 			border-radius: 16px;
@@ -148,7 +152,7 @@
 			}
 
 			@media (max-width: 425px) {
-				width: 380px;
+				width: 300px;
 				height: 450px;
 
 				.light {
