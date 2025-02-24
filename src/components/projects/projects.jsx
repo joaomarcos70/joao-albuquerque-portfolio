@@ -56,7 +56,7 @@ const Projects = () => {
 							</div>
 							<div className="light"></div>
 							<div className="project-image">
-								<img loading="lazy" src={project.picture} alt="imagem do projeto" />
+								<img loading="lazy" src={project.picture} alt={project.alt} />
 							</div>
 							<div className="project-info">
 								<h1>{project.title}</h1>

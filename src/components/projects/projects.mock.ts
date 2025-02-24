@@ -10,11 +10,13 @@ export const projects = [
 			e no Picpay não é diferente.`,
 		picture: PicpayProject,
 		Link: "http://renegociacao.picpay.com",
+		alt: "Recuperação de crédito PicPay",
 	},
 	{
 		title: `Gerenciamento de arquivos Superfood`,
 		description: `Sistema de gerenciamento de arquivos integrado ao Google Drive.`,
 		picture: superfoodProject,
 		Link: "/projeto-superfood",
+		alt: "Gerenciamento de arquivos Superfood",
 	},
 ];
