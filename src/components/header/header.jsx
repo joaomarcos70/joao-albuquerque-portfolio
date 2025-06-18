@@ -1,7 +1,11 @@
-import React, { useState, useEffect, useContext } from "react";
-import "./header.scss";
-import { AnchorMenuContext } from "../../context/anchorMenuContext";
+import { useContext, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { AnchorMenuContext } from "../../context/anchorMenuContext";
+import { LanguageContext } from "../../context/languageContext";
+import en from '../../shared/utils/locales/en.json';
+import pt from '../../shared/utils/locales/pt.json';
+import "./header.scss";
+
 
 const Header = () => {
 	const [width, setWidth] = useState(window.innerWidth);
@@ -11,8 +15,11 @@ const Header = () => {
 	const navigate = useNavigate();
 	const { pathname } = useLocation();
 	const isHomePage = pathname === "/home";
-
+	const { language, setLanguageContext } = useContext(LanguageContext)
+	const contentPage = { pt, en }
 	const isMobile = width <= 920;
+	const [selectedLanguage, setSelectedLanguage] = useState(language)
+
 
 	const menuOpen = () => {
 		const menuHamburguer = document.querySelector(".hamburguer");
@@ -53,6 +60,11 @@ const Header = () => {
 		};
 	}, []);
 
+	const handleLangClick = (lang) => {
+		setSelectedLanguage(lang)
+		setLanguageContext(lang)
+	}
+
 	return (
 		<>
 			<div className={`header ${scrolled ? "header-scrolled" : ""}`}>
@@ -66,15 +78,20 @@ const Header = () => {
 						<div className="bar3"></div>
 					</div>
 				) : (
-					<ul className="items">
+					<><ul className="items">
 						{isHomePage && (
 							<>
-								<li onClick={() => defineMenuAnchor("sobre")}>sobre</li>
-								<li onClick={() => defineMenuAnchor("projetos")}>projetos</li>
-								<li onClick={() => defineMenuAnchor("contato")}>contato</li>
+								<li onClick={() => defineMenuAnchor("sobre")}>{contentPage[language].menu.items[0].name}</li>
+								<li onClick={() => defineMenuAnchor("projetos")}>{contentPage[language].menu.items[1].name}</li>
+								<li onClick={() => defineMenuAnchor("contato")}>{contentPage[language].menu.items[2].name}</li>
 							</>
 						)}
 					</ul>
+						<div className="toggle-container">
+							<div onClick={() => handleLangClick('en')} className={"lang-btn" + (selectedLanguage === 'en' ? ' active' : '')}>EN</div>
+							<div onClick={() => handleLangClick('pt')} className={"lang-btn" + (selectedLanguage === 'pt' ? ' active' : '')}>PT</div>
+						</div>
+					</>
 				)}
 			</div>
 			{openMenuHamburguer && isMobile ? (
@@ -82,9 +99,14 @@ const Header = () => {
 					<ul className="menu-hamburguer-items">
 						{isHomePage && (
 							<>
-								<li onClick={() => defineMenuAnchor("sobre")}>sobre</li>
-								<li onClick={() => defineMenuAnchor("projetos")}>projetos</li>
-								<li onClick={() => defineMenuAnchor("contato")}>contato</li>
+								<>
+									<li onClick={() => defineMenuAnchor("sobre")}>{contentPage[language].menu.items[0].name}</li>
+									<li onClick={() => defineMenuAnchor("projetos")}>{contentPage[language].menu.items[1].name}</li>
+									<li onClick={() => defineMenuAnchor("contato")}>{contentPage[language].menu.items[2].name}</li>
+								</><div className="toggle-container">
+									<div onClick={() => handleLangClick('en')} className={"lang-btn" + (selectedLanguage === 'en' ? ' active' : '')}>EN</div>
+									<div onClick={() => handleLangClick('pt')} className={"lang-btn" + (selectedLanguage === 'pt' ? ' active' : '')}>PT</div>
+								</div>
 							</>
 						)}
 					</ul>

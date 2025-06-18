@@ -1,19 +1,21 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import {
 	createBrowserRouter,
+	Navigate,
+	Outlet,
 	RouterProvider,
 	useLocation,
-	Outlet,
-	Navigate,
 } from "react-router-dom";
+import Footer from "./components/footer/footer";
+import Header from "./components/header/header";
 import Home from "./components/home/home";
 import SuperfoodProject from "./components/superfood-project/superfood-project";
 import { AnchorMenuProvider } from "./context/anchorMenuContext";
+import { LanguageProvider } from "./context/languageContext";
 import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
-import Header from "./components/header/header";
-import Footer from "./components/footer/footer";
+
 
 const ScrollToTop = () => {
 	const { pathname } = useLocation();
@@ -62,9 +64,11 @@ const router = createBrowserRouter([
 
 const App = () => {
 	return (
-		<AnchorMenuProvider>
-			<RouterProvider router={router} />
-		</AnchorMenuProvider>
+		<LanguageProvider>
+			<AnchorMenuProvider>
+				<RouterProvider router={router} />
+			</AnchorMenuProvider>
+		</LanguageProvider>
 	);
 };
 

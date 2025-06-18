@@ -1,0 +1,115 @@
+{
+  "home": {
+    "profession": "software developer",
+    "profession_details": "I'm a front-end developer specialized in building digital experiences. I'm currently working at",
+    "current_job": "Picpay",
+    "CTA": "Download CV"
+  },
+  "about_me": {
+    "title": "A bit about me.",
+    "text_pt1": "My interest in **development** started with **online games**, where I could spend the whole day playing and that would be the perfect day. But in 2010, without even realizing it at the time, I discovered one of my greatest passions: **customizing things**. Everything I had, I wanted to change from the **default** state.",
+    "text_pt2": "That's when I created **a YouTube channel** about customizing Windows 7, where I could create, reuse, and have fun changing the entire operating system on my mom's laptop (she didn't even get mad, trust me).",
+    "text_pt3": "And only in **2019** did I start my **development career** as a **full stack** developer, which I consider a great start. Having contact with a bit of everything was amazing, and learning something new every day was rewarding.",
+    "text_pt4": "However, it was in **front end** where I truly found myself. Today, my focus is on creating **incredible** and **unique experiences** for users. Every project is an opportunity to **innovate** and **exceed** expectations, turning ideas into reality. The satisfaction of seeing users interacting with something I created is what motivates me to keep evolving and always striving for the best."
+  },
+  "projects": {
+    "title": "Main projects.",
+    "suport_text": "see more",
+    "project1": {
+      "title": "Picpay Credit Recovery",
+      "desc": "Credit recovery is fundamental for the financial health of a company, and at Picpay it is no different."
+    },
+    "project2": {
+      "title": "Superfood File Management",
+      "desc": "File management system integrated with Google Drive.",
+      "content": {
+        "title": "Superfood Project",
+        "overview_title": "Overview",
+        "overview_text": "The **Superfood** project is a complete document management solution for the company Superfood, integrating frontend and backend with a Node.js API that connects to Google Drive. The system was developed to meet the company's specific needs, providing a user-friendly interface and a robust backend for efficient document and client management.",
+        "main_features_title": "Main Features",
+        "features": [
+          {
+            "title": "Authentication",
+            "text": "Authentication in the system is performed using Google's **OAuth2.0** technology, ensuring security and ease of use."
+          },
+          {
+            "title": "Access Profiles",
+            "list": [
+              "**Admin**: The admin profile has access to all system features, including document and client management.",
+              "**Regular User**: The regular user can view their assigned document requests and submit the required documents."
+            ]
+          },
+          {
+            "title": "Document Management",
+            "sections": [
+              {
+                "subtitle": "Admin Area",
+                "list": [
+                  "**Request CRUD**: The admin can create, view, update, and delete document requests.",
+                  "**Document Rejection**: After a user submits a document, the admin can reject the document if there is any issue.",
+                  "**Special Filters**: The admin has access to special filters that make it easier to manage users and documents."
+                ]
+              },
+              {
+                "subtitle": "User Area",
+                "list": [
+                  "**View Requests**: Users can view all document requests assigned to them.",
+                  "**Submit Documents**: Users can submit documents in any format accepted by Google Drive. After submission, the document is automatically updated in the database and organized in Google Drive."
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Storage Structure",
+            "text": "Documents are automatically organized in Google Drive following the structure: **Department > Client > Year > Month > Day**, making maintenance and corrections easier for the Superfood team."
+          },
+          {
+            "title": "Client Management (Admin)",
+            "list": [
+              "**Client CRUD**: The admin can manage all Superfood clients, including registering new clients, granting system access, deactivating, and reactivating clients."
+            ]
+          }
+        ],
+        "screenshots_title": "Screenshots",
+        "screenshots": [
+          {
+            "title": "Login Area"
+          },
+          {
+            "title": "Document Management"
+          },
+          {
+            "title": "Create Activity"
+          },
+          {
+            "title": "Edit Document"
+          },
+          {
+            "title": "Client Management"
+          }
+        ],
+        "final_considerations_title": "Final Considerations",
+        "final_considerations_text": "The Superfood project was developed to simplify and optimize document and client management, using modern technologies and development best practices. With Google Drive integration, the system offers a complete and scalable solution for the company's needs.",
+        "footer_text": "Don't hesitate to reach out! Want to build your portfolio, create a strong brand, or simply chat about tech? I'm here to help. Let's turn your ideas into reality together!",
+        "footer_cta": "Send a message"
+      }
+    }
+  },
+  "footer": {
+    "details": "Don't hesitate to reach out! Want to build your portfolio, create a strong brand, or simply chat about tech? I'm here to help. Let's turn your ideas into reality together!",
+    "CTA": "Send a message"
+  },
+  "menu": {
+    "items": [
+      {
+        "name": "about"
+      },
+      {
+        "name": "projects"
+      },
+      {
+        "name": "contact"
+      }
+    ]
+  }
+}

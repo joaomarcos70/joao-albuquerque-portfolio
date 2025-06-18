@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./footer.scss";
 import Contact from "../contatos/contact";
+import { LanguageContext } from "../../context/languageContext";
+import pt from '../../shared/utils/locales/pt.json'
+import en from '../../shared/utils/locales/en.json'
 
 const Footer = () => {
+	const { language } = useContext(LanguageContext)
+	const contentPage = { pt, en }
 	const open = ({ url }) => {
 		window.open(url, "_blank");
 	};
@@ -14,15 +19,13 @@ const Footer = () => {
 				<div className="light"></div>
 				<div className="footer-content">
 					<p>
-						Não deixe de me chamar! Quer desenvolver seu portfólio, criar uma marca impactante, ou
-						simplesmente trocar uma ideia sobre tech? Estou aqui para ajudar. Vamos juntos
-						transformar suas ideias em realidade!
+						{contentPage[language].footer.details}
 					</p>
 					<button
 						onClick={() => open({ url: "https://www.linkedin.com/in/joaoalbuquerq/" })}
 						className="say-hello"
 					>
-						Envie uma mensagem
+						{contentPage[language].footer.CTA}
 					</button>
 				</div>
 			</footer>

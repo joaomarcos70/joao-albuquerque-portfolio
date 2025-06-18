@@ -4,6 +4,7 @@ nav {
 	position: sticky;
 	top: 0;
 }
+
 .header {
 	display: flex;
 	justify-content: space-between;
@@ -24,6 +25,7 @@ nav {
 		flex: 1 1 auto;
 		justify-content: center;
 	}
+
 	.logo {
 		border-radius: 8px;
 		font-size: 30px;
@@ -36,7 +38,7 @@ nav {
 
 		&:hover {
 			cursor: pointer;
-			animation: coloredLogo 1s linear forwards;
+			animation: coloredLogo 0.5s linear forwards;
 		}
 	}
 
@@ -44,15 +46,18 @@ nav {
 		0% {
 			color: $main-white;
 		}
+
 		100% {
 			color: $highlight;
 		}
 	}
+
 	li {
 		padding: 30px;
 		font-size: 22px;
 		background-color: transparent;
 		color: $main-white;
+
 		&::after {
 			content: "";
 			display: block;
@@ -61,8 +66,10 @@ nav {
 			background-color: $main-white;
 			transition: width 0.3s;
 		}
+
 		&:hover {
 			cursor: pointer;
+
 			&::after {
 				width: 100%;
 			}
@@ -72,10 +79,12 @@ nav {
 	.hamburguer {
 		padding: 30px;
 		background: transparent;
+
 		&:hover {
 			cursor: pointer;
 			animation: coloredHamburguer 1s linear forwards;
 		}
+
 		div.bar1,
 		div.bar2,
 		div.bar3 {
@@ -90,9 +99,11 @@ nav {
 	.hamburguer.active div.bar1 {
 		transform: rotate(-45deg) translate(-7px, 6px);
 	}
+
 	.hamburguer.active div.bar2 {
 		opacity: 0;
 	}
+
 	.hamburguer.active div.bar3 {
 		transform: rotate(45deg) translate(-9px, -8px);
 	}
@@ -116,6 +127,7 @@ nav {
 	li {
 		background: transparent;
 	}
+
 	ul.menu-hamburguer-items {
 		display: flex;
 		flex-direction: column;
@@ -128,6 +140,7 @@ nav {
 		width: 100%;
 		height: 100%;
 	}
+
 	li {
 		width: 100%;
 		text-align: center;
@@ -135,6 +148,7 @@ nav {
 		font-size: 22px;
 		background-color: transparent;
 		color: $main-white;
+
 		&::after {
 			content: "";
 			display: block;
@@ -143,8 +157,10 @@ nav {
 			background-color: $main-white;
 			transition: width 0.3s;
 		}
+
 		&:hover {
 			cursor: pointer;
+
 			&::after {
 				width: 100%;
 			}
@@ -163,8 +179,50 @@ nav {
 		0% {
 			opacity: 0;
 		}
+
 		100% {
 			opacity: 1;
+		}
+	}
+}
+
+.toggle-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
+	padding: 0px 64px;
+
+	.lang-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 32px;
+		height: 32px;
+
+		&:hover {
+			cursor: pointer;
+			animation: coloredLanguage 0.5s linear forwards;
+		}
+
+		&.active{
+			color: $dark-highlight;
+			font-weight: 700;
+
+			&:hover{
+				animation: none;
+			}
+		}
+
+
+		@keyframes coloredLanguage {
+			0% {
+				color: $main-white;
+			}
+
+			100% {
+				color: $highlight;
+			}
 		}
 	}
 }

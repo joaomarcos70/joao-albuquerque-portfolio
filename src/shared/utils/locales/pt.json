@@ -1,0 +1,115 @@
+{
+    "home": {
+        "profession": "desenvolvedor de software",
+        "profession_details": "Sou um desenvolvedor front-end especializado na construção de experiências digitais. Atualmente, eu estou trabalhando no",
+        "current_job": "Picpay",
+        "CTA": "Baixar CV"
+    },
+    "about_me": {
+        "title": "Um pouco sobre mim.",
+        "text_pt1": "Meu interesse por **desenvolvimento** começou com os **jogos online**, onde eu poderia passar o dia inteiro jogando e esse seria o dia perfeito. Mas foi em 2010 que, mesmo sem saber na hora, descobri uma das minhas maiores paixões: **personalizar coisas**. Tudo que eu tinha eu queria tirar do estado **padrão**.",
+        "text_pt2": "Foi então que criei **um canal no YouTube** sobre personalização de Windows 7, onde eu podia criar, reutilizar e brincar mudando todo o sistema operacional do notebook da minha mãe (ela nem ficava brava, confia).",
+        "text_pt3": "E somente em **2019**, iniciei minha **carreira em desenvolvimento** como **full stack**, o que considero um ótimo começo, ter contato com um pouco de tudo foi incrível, e aprender algo novo todos os dias era gratificante.",
+        "text_pt4": "Porém, foi no **front end** que realmente me encontrei. Hoje, meu foco está em criar **experiências incríveis** e **únicas** para os usuários. Cada projeto é uma oportunidade de **inovar** e **superar** as expectativas, transformando ideias em realidade. A satisfação de ver os usuários interagindo com algo que eu criei é o que me motiva a continuar evoluindo e buscando sempre o melhor."
+    },
+    "projects": {
+        "title": "Principais projetos.",
+        "suport_text": "saiba mais",
+        "project1": {
+            "title": "Recuperação de crédito Picpay",
+            "desc": "A recuperação de crédito é fundamental para a saúde financeira de uma empresa, e no Picpay não é diferente."
+        },
+        "project2": {
+            "title": "Gerenciamento de arquivos Superfood",
+            "desc": "Sistema de gerenciamento de arquivos integrado ao Google Drive.",
+            "content": {
+                "title": "Projeto Superfood",
+                "overview_title": "Visão Geral",
+                "overview_text": "O projeto **Superfood** é uma solução completa de gestão de documentos para a empresa Superfood, integrando frontend e backend com uma API em Node.js que realiza a integração com o Google Drive. O sistema foi desenvolvido para atender às necessidades específicas da empresa, proporcionando uma interface amigável e um backend robusto para a gestão eficiente de documentos e clientes.",
+                "main_features_title": "Funcionalidades Principais",
+                "features": [
+                    {
+                        "title": "Autenticação",
+                        "text": "A autenticação no sistema é realizada utilizando a tecnologia **OAuth2.0** do Google, garantindo segurança e facilidade de uso."
+                    },
+                    {
+                        "title": "Perfis de Acesso",
+                        "list": [
+                            "**Admin**: O perfil de administrador tem acesso a todas as funcionalidades do sistema, incluindo a gestão de documentos e clientes.",
+                            "**Usuário Padrão**: O usuário padrão pode visualizar as pendências de documentos atribuídas a ele e realizar o envio dos documentos necessários."
+                        ]
+                    },
+                    {
+                        "title": "Gestão de Documentos",
+                        "sections": [
+                            {
+                                "subtitle": "Parte do Admin",
+                                "list": [
+                                    "**CRUD de Pendências**: O administrador pode criar, visualizar, atualizar e excluir pendências de documentos.",
+                                    "**Recusa de Documentos**: Após o envio de um documento pelo usuário, o administrador pode recusar o documento caso haja alguma pendência.",
+                                    "**Filtros Especiais**: O administrador tem acesso a filtros especiais que facilitam o gerenciamento dos usuários e dos documentos."
+                                ]
+                            },
+                            {
+                                "subtitle": "Parte do Usuário",
+                                "list": [
+                                    "**Visualização de Pendências**: Os usuários podem visualizar todas as pendências de documentos que foram atribuídas a eles.",
+                                    "**Envio de Documentos**: Os usuários podem enviar documentos em qualquer formato aceito pelo Google Drive. Após o envio, o documento é automaticamente atualizado no banco de dados e organizado no Google Drive."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Estrutura de Armazenamento",
+                        "text": "Os documentos são organizados automaticamente no Google Drive seguindo a estrutura: **Setor > Cliente > Ano > Mês > Dia**, facilitando a manutenção e correções pela equipe da Superfood."
+                    },
+                    {
+                        "title": "Gestão de Clientes (Admin)",
+                        "list": [
+                            "**CRUD de Clientes**: O administrador pode gerenciar todos os clientes da Superfood, incluindo o cadastro de novos clientes, concessão de acesso ao sistema, desativação e reativação de clientes."
+                        ]
+                    }
+                ],
+                "screenshots_title": "Screenshots",
+                "screenshots": [
+                    {
+                        "title": "Área de Login"
+                    },
+                    {
+                        "title": "Gerenciamento de Documentos"
+                    },
+                    {
+                        "title": "Criar Atividade"
+                    },
+                    {
+                        "title": "Editar Documento"
+                    },
+                    {
+                        "title": "Gestão de Clientes"
+                    }
+                ],
+                "final_considerations_title": "Considerações Finais",
+                "final_considerations_text": "O projeto Superfood foi desenvolvido para simplificar e otimizar a gestão de documentos e clientes, utilizando tecnologias modernas e boas práticas de desenvolvimento. Com a integração ao Google Drive, o sistema oferece uma solução completa e escalável para as necessidades da empresa.",
+                "footer_text": "Não deixe de me chamar! Quer desenvolver seu portfólio, criar uma marca impactante, ou simplesmente trocar uma ideia sobre tech? Estou aqui para ajudar. Vamos juntos transformar suas ideias em realidade!",
+                "footer_cta": "Envie uma mensagem"
+            }
+        }
+    },
+    "footer": {
+        "details": "Não deixe de me chamar! Quer desenvolver seu portfólio, criar uma marca impactante, ou simplesmente trocar uma ideia sobre tech? Estou aqui para ajudar. Vamos juntos transformar suas ideias em realidade!",
+        "CTA": "Envie uma mensagem"
+    },
+    "menu": {
+        "items": [
+            {
+                "name": "sobre"
+            },
+            {
+                "name": "projetos"
+            },
+            {
+                "name": "contato"
+            }
+        ]
+    }
+}

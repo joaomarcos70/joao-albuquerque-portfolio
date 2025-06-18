@@ -1,24 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./slogan.scss";
 import lightRayImage from "../../shared/images/assets/light-ray.png";
 import sloganGif from "../../shared/images/assets/slogan.gif";
+import { LanguageContext } from "../../context/languageContext";
+import pt from '../../shared/utils/locales/pt.json'
+import en from '../../shared/utils/locales/en.json'
 
 const openLink = () => {
 	window.open("https://picpay.com/");
 };
 
 const Slogan = () => {
+	const { language } = useContext(LanguageContext)
+	const contentPage = { pt, en }
+
 	return (
 		<>
 			<div className="slogan-container" id="slogan">
 				<div className="slogan-content">
 					<h1>João Albuquerque</h1>
-					<h2>desenvolvedor de software</h2>
+					<h2>{contentPage[language].home.profession}</h2>
 					<p className="subtext">
-						Sou um desenvolvedor front-end especializado na construção de experiências digitais.
-						Atualmente, eu estou trabalhando no{" "}
+						{contentPage[language].home.profession_details}{' '}
 						<span onClick={() => openLink()} className="highlight">
-							Picpay
+							{contentPage[language].home.current_job}
 						</span>
 					</p>
 					<div
